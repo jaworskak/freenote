@@ -1,3 +1,14 @@
 .App{
   margin:1%;
 }
+
+/* losowanie kolorów - w zależności od tego jaki background zostanie wylosowany takie będą głowne kolory nabv, footer, sekcji */
+
+.mainsection{
+    background-image: url("./MainSection/background/3.jpeg");
+    max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
+	height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
