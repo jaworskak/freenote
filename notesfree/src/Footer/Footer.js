@@ -5,7 +5,7 @@ import {useGlobalContext} from '../context'
 
 const Footer = (props) =>{
 
-    console.log(props)
+  
 
     const {AddSection,parent_section_id,parent_section_name} = useGlobalContext()
 

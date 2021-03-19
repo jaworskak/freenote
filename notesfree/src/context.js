@@ -7,15 +7,15 @@ const sections ={
     section_list: [], // na poczatku psuta lista
     opened_section_id: 0, // chyba latwiej bedzie przechodzic przez zagniezdzenia posiadajac indywidualne id otwartego? jesli to nie ta sekcja ma takie id to nei jest otwarta
     opened_section_name: "", // jak cos tam jest napsiane to znaczy, ze dodajemy nizej niz do widoku głównego
-    parent_section_id: 1,
-    parent_section_name: "tescik", // nazwa sekcji z której przyszliśmy 
+    parent_section_id: 0,
+    parent_section_name: "", // nazwa sekcji z której przyszliśmy 
 
 }
 
 const AppProvider = ({children}) =>{
-    console.log(sections)
+ 
     const [state,dispatch] = useReducer(reducer,sections)
-    console.log(state)
+
 
     const Toggle = (section_id) =>{
         dispatch({type:'TOGGLE',section_id:section_id})

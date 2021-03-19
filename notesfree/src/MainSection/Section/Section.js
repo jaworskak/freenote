@@ -9,7 +9,7 @@ const Section = (props) =>{
 
     return (
         <div onClick={Toggle}> 
-             { props.open &&     
+             { props.open===props.section_id &&     
         <div className="section road active">
             <p>Donec sed risus lectus. Nulla dignissim et augue et finibus. Nulla volutpat commodo odio et consequat. Integer interdum id diam a lacinia. 
                 Nulla lobortis est non est fermentum, in mollis magna pharetra. Cras vel sagittis enim, pulvinar dapibus neque. Vivamus vel leo at orci condimentum vestibulum nec sed nisi.
@@ -18,9 +18,9 @@ const Section = (props) =>{
                   Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
         </div>
             }
-            { !props.open &&
+            { !props.open===props.section_id &&
             <div className="section road">
-              <p>Filmy</p>
+              <p>{props.section_name}</p>
             </div>           
             }
           </div>
