@@ -1,10 +1,22 @@
 import React from 'react'
 import './Footer.css'
 import '../App.css'
+import {useGlobalContext} from '../context'
 
-const Footer = () =>{
+const Footer = (props) =>{
+
+    console.log(props)
+
+    const {AddSection,parent_section_id,parent_section_name} = useGlobalContext()
+
+   
     return (
-        <div className="footer road">footer</div>
+        <div className="footer road">
+            <button className="btn-add-section road" onClick={AddSection}>Dodaj nową sekcję do 
+            { parent_section_id===0 && <b> głównego widoku</b>}
+            {parent_section_id!==0 && <b> {parent_section_name}</b>}
+             </button>
+        </div>
     )
 }
 
