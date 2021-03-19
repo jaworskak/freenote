@@ -3,6 +3,15 @@
 }
 
 /* losowanie kolorów - w zależności od tego jaki background zostanie wylosowany takie będą głowne kolory nabv, footer, sekcji */
+:root {
+  /* dark shades of primary color*/
+  --color-navbar-road: rgb(192, 207, 236);
+  --color-text-road: rgb(150, 146, 143);
+  --color-footer-road: rgb(234, 194, 45);
+  --color-section-road: rgb(59,58,28);
+  --color-section-border-road: rgb(208,164,115);
+  --color-section-active-road: rgb(208,164,115);
+}
 
 .mainsection{
     background-image: url("./MainSection/background/3.jpeg");
@@ -11,4 +20,33 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+      color:var(--color-text-road);
+    overflow-y: auto;
+}
+
+/* road */
+.mainsection.road{
+  background-image: url("./MainSection/background/6.jpeg");
+}
+
+.navbar.road{
+  background-color: var(--color-navbar-road);
+  color:whitesmoke;
+    color:var(--color-text-road);
+}
+
+.footer.road{
+   background-color: var(--color-footer-road);
+     color:var(--color-text-road);
+}
+
+
+.section.road{
+background-color: var(--color-section-road);
+padding: 2rem;
+border:2px solid var(--color-section-border-road);
+}
+
+.section.active.road{
+background-color: var(--color-section-active-road);
 }

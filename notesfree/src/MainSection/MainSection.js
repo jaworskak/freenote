@@ -5,10 +5,10 @@ import Section from './Section/Section'
 
 const MainSection = () =>{
     return (
-        <div className="mainsection">
-            <Section className="section even"/>
-            <Section className="section odd"/>
-            <Section className="section even active"/>
+        <div className="mainsection road">
+            <Section />
+            <Section />
+            <Section className="active"/>
         </div>
     )
 }
