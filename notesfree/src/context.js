@@ -13,12 +13,13 @@ const sections ={
 }
 
 const AppProvider = ({children}) =>{
+
  
     const [state,dispatch] = useReducer(reducer,sections)
 
 
-    const Toggle = (section_id) =>{
-        dispatch({type:'TOGGLE',section_id:section_id})
+    const Toggle = (section_id,section_name) =>{
+        dispatch({type:'TOGGLE',opened_section_id:section_id, opened_section:section_name})
     }
 
     const AddSection = (opened_section_id, section_name) =>{

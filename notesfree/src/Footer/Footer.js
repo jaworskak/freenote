@@ -11,8 +11,8 @@ const Footer = (props) =>{
 
    
     return (
-        <div className="footer road">
-            <button className="btn-add-section road" onClick={AddSection}>Dodaj nową sekcję do 
+        <div className="footer">
+            <button className="btn-add-section" onClick={AddSection}>Dodaj nową sekcję do 
             { parent_section_id===0 && <b> głównego widoku</b>}
             {parent_section_id!==0 && <b> {parent_section_name}</b>}
              </button>

@@ -4,7 +4,9 @@ import '../App.css'
 
 const NavBar = () =>{
     return (
-        <nav className="navbar road">navbar</nav>
+        <nav className="navbar">
+            <button>style</button>
+        </nav>
     )
 }
 

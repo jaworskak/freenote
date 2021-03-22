@@ -9,17 +9,24 @@
 
 /* losowanie kolorów - w zależności od tego jaki background zostanie wylosowany takie będą głowne kolory nabv, footer, sekcji */
 :root {
-  /* dark shades of primary color*/
+  /* road*/
   --color-navbar-road: rgb(192, 207, 236);
   --color-add-section-road: rgb(192, 207, 236);
   --color-footer-road: rgb(234, 194, 45);
   --color-section-road: rgb(59,58,28);
   --color-section-border-road: rgb(208,164,115);
   --color-section-active-road: rgb(208,164,115);
+
+  /* snow trees  */
+    --color-navbar-snowtrees: rgb(9, 136, 253);
+     --color-footer-snowtrees: rgb(212, 213, 215);
+     --color-add-section-snowtrees: rgb(35, 175, 254);
+      --color-section-snowtrees: rgb(137,166,206);
+     --color-section-active-snowtrees: rgb(212,213,215);
+     --color-section-border-snowtrees: rgb(112,90,53);
 }
 
 .mainsection{
-    background-image: url("./MainSection/background/3.jpeg");
     max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
 	  height: 80vh;
     background-position: center;
@@ -29,31 +36,62 @@
 }
 
 /* road */
-.mainsection.road{
+.App.road .navbar{
+  background-color: var(--color-navbar-road);
+}
+.App.road .mainsection{
   background-image: url("./MainSection/background/6.jpeg");
 }
 
-.navbar.road{
-  background-color: var(--color-navbar-road);
-}
-
-.footer.road{
+.App.road .footer{
    background-color: var(--color-footer-road);
 }
 
 
-.section.road{
+.App.road .section{
 background-color: var(--color-section-road);
 padding: 2rem;
 border:2px solid var(--color-section-border-road);
 }
 
-.section.active.road{
+.App.road .section.active{
 background-color: var(--color-section-active-road);
 padding: 2rem;
 border:2px solid var(--color-section-road);
 }
 
-.btn-add-section.road{
+.App.road .btn-add-section{
  background-color: var(--color-add-section-road);
+}
+
+/* road */
+
+
+/* snow trees */
+.App.snowtrees .mainsection{
+  background-image: url("./MainSection/background/7.jpeg");
+}
+
+.App.snowtrees .navbar{
+  background-color: var(--color-navbar-snowtrees);
+}
+
+.App.App.snowtrees .footer{
+   background-color: var(--color-footer-snowtrees);
+}
+
+.App.snowtrees .btn-add-section{
+ background-color: var(--color-add-section-snowtrees);
+}
+
+.App.snowtrees .section.active{
+background-color: var(--color-section-active-snowtrees);
+padding: 2rem;
+border:2px solid var(--color-section-border-snowtrees);
+}
+
+.App.snowtrees .section{
+background-color: var(--color-section-snowtrees);
+padding: 2rem;
+border:2px solid var(--color-section-border-snowtrees);
 }

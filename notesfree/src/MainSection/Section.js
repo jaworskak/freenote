@@ -1,16 +1,17 @@
 import React from 'react'
 import './Section.css'
+import {useGlobalContext} from '../context'
 
 const Section = (props) =>{
 
-   const Toggle = () =>{
-        console.log('toggle')
-    }
+     
+    const {Toggle} = useGlobalContext()
+
 
     return (
-        <div onClick={Toggle}> 
+        <div> 
              { props.open===props.section_id &&     
-        <div className="section road active">
+        <div className="section active">
             <p>Donec sed risus lectus. Nulla dignissim et augue et finibus. Nulla volutpat commodo odio et consequat. Integer interdum id diam a lacinia. 
                 Nulla lobortis est non est fermentum, in mollis magna pharetra. Cras vel sagittis enim, pulvinar dapibus neque. Vivamus vel leo at orci condimentum vestibulum nec sed nisi.
                  Fusce ipsum arcu, egestas sed odio sed, euismod imperdiet urna. Etiam vestibulum eget risus quis volutpat. Integer feugiat aliquet ipsum, vitae mattis lectus varius a.
@@ -18,8 +19,8 @@ const Section = (props) =>{
                   Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
         </div>
             }
-            { !props.open===props.section_id &&
-            <div className="section road">
+            { props.open!==props.section_id &&
+            <div className="section"  onClick={() => Toggle(props.section_id,props.section_name)} >
               <p>{props.section_name}</p>
             </div>           
             }
