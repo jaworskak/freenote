@@ -1,0 +1,8 @@
+.active{
+    display:grid;
+      grid-template-rows: 5vh 30vh;
+}
+
+.section{
+    height: 2vh;
+}

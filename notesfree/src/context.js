@@ -23,8 +23,6 @@ const AppProvider = ({children}) =>{
     }
 
     const AddNewSection = (parent_section_id,opened_section_id, section_name) =>{
-        console.log(opened_section_id)
-        console.log(parent_section_id)
         dispatch({type:'ADD_NEW_SECTION',opened_section_id:opened_section_id, section_name:section_name,parent_section_id:parent_section_id})
     }
 

@@ -50,7 +50,6 @@
 
 .App.road .section{
 background-color: var(--color-section-road);
-padding: 2rem;
 border:2px solid var(--color-section-border-road);
 }
 
