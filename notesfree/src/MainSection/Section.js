@@ -1,6 +1,7 @@
 import React from 'react'
 import './Section.css'
 import {useGlobalContext} from '../context'
+import Element from './Element'
 
 const Section = (props) =>{
 
@@ -15,6 +16,7 @@ const Section = (props) =>{
               <h3>{props.section_name}</h3>
             </div>
             <div className="section-actv-continer">
+              <Element/>   
             </div>
             <div className="section-actv-footer">
              <button className="section-actv-add-elem">Dodaj nowy element do <b>{props.section_name}</b></button> 

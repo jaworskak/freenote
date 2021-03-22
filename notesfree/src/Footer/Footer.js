@@ -31,7 +31,7 @@ const Footer = (props) =>{
              <div className="modalSectionName">
                  <form>
                 <label>Nazwa sekcji:</label>
-                <input type="text" value={newSectionName} onChange={(e)=>setNewsetionName(e.target.value)}></input>
+                <input type="text"  onChange={(e)=>setNewsetionName(e.target.value)}></input>
                 </form>
                 <button className="btn-section-add" onClick={()=>BtnAddNewSection()}>Dodaj</button>
             </div>          
