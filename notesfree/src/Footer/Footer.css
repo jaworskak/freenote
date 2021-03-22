@@ -11,3 +11,20 @@
  margin:0.5%;
  font-size: 1.5rem;
 }
+
+.modal{
+     position: absolute;
+     width:60vw;
+     height:40vh;
+     /* zeby bylo zawsze na srodku */
+     left:50%;
+     top:50%;
+     transform: translate(-50%, -50%); /* pozycja zawsze na środku*/
+     background: linear-gradient(to bottom, rgb(212,213,215), rgb(121,215,253)); 
+     border:2px solid darkblue;
+     box-shadow: 5px 10px 8px 10px rgb(77, 74, 74);
+}
+
+.modalSectionName{
+       justify-content: center;
+}

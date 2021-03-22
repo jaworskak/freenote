@@ -22,13 +22,16 @@ const AppProvider = ({children}) =>{
         dispatch({type:'TOGGLE',opened_section_id:section_id, opened_section:section_name})
     }
 
-    const AddSection = (opened_section_id, section_name) =>{
-        dispatch({type:'ADD_NEW_SECTION',opened_section_id:opened_section_id, section_name:section_name})
+    const AddNewSection = (parent_section_id,opened_section_id, section_name) =>{
+        console.log(opened_section_id)
+        console.log(parent_section_id)
+        dispatch({type:'ADD_NEW_SECTION',opened_section_id:opened_section_id, section_name:section_name,parent_section_id:parent_section_id})
     }
+
 
     return (
         <AppContext.Provider
-            value={{...state,Toggle,AddSection}}>
+            value={{...state,Toggle,AddNewSection}}>
                 {children}
         </AppContext.Provider>
     )

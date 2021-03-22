@@ -73,7 +73,8 @@ border:2px solid var(--color-section-road);
 }
 
 .App.snowtrees .navbar{
-  background-color: var(--color-navbar-snowtrees);
+  background: linear-gradient(to bottom, rgb(6, 104, 196), rgb(5, 151, 209)); 
+  border-bottom: 20x darkblue;
 }
 
 .App.App.snowtrees .footer{
@@ -88,6 +89,7 @@ border:2px solid var(--color-section-road);
 background-color: var(--color-section-active-snowtrees);
 padding: 2rem;
 border:2px solid var(--color-section-border-snowtrees);
+height:40vh;
 }
 
 .App.snowtrees .section{
