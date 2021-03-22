@@ -55,7 +55,6 @@ border:2px solid var(--color-section-border-road);
 
 .App.road .section.active{
 background-color: var(--color-section-active-road);
-padding: 2rem;
 border:2px solid var(--color-section-road);
 }
 
@@ -86,13 +85,11 @@ border:2px solid var(--color-section-road);
 
 .App.snowtrees .section.active{
 background-color: var(--color-section-active-snowtrees);
-padding: 2rem;
 border:2px solid var(--color-section-border-snowtrees);
 height:40vh;
 }
 
 .App.snowtrees .section{
 background-color: var(--color-section-snowtrees);
-padding: 2rem;
 border:2px solid var(--color-section-border-snowtrees);
 }
