@@ -9,6 +9,23 @@ const reducer = (state, action) =>{
     if(action.type==='TOGGLE'){
         return {...state,opened_section_id:action.opened_section_id, opened_section_name:action.opened_section_name}
     }
+    if(action.type==='ADD_NEW_ELEMENT'){
+        // dodanie listy elementów do konkretnej sekcji
+        var elements_list =[]
+
+       let tempSection =state.section_list.map((section)=>{
+            if(section.section_id===action.section_id){
+               // if(section.includes("elements")){
+               //     elements_list = [...section.elements]
+              //  }
+                elements_list.push({element_id:action.element_id, element_value:action.element_value, element_tag:action.element_tag})
+
+                return {...section,elements:elements_list} // dodaje liste elementów do konkretnej sekcji. inne zwracam tak jak były
+            }
+            return section
+        })
+        return{...state,section_list:tempSection} // otwarte/zamkniete elementy zostaja takie same
+    }
 }
 
 export default reducer

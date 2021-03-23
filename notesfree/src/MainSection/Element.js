@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import './Element.css'
+import {useGlobalContext} from '../context'
 
-const Element = () =>{
+const Element = (props) =>{
 
   // dopiero po dodaniu tagu sprawdzamy czy element jest linkiek
 function validURL(str) {
@@ -14,6 +15,8 @@ function validURL(str) {
   return !!pattern.test(str);
 }
 
+const {AddNewElement} = useGlobalContext()
+
 const [elementValue,setElementValue] = useState("");
 const [tag, setTag] = useState("")
 
@@ -25,14 +28,20 @@ const SaveElem = () =>{
   if(validURL(elementValue)){
     console.log('link')
   }
+
+  AddNewElement(props.section_id,1,elementValue,tag,1);
 }
 
-    return (
+    return ( // todo: albo przeciaganie elementu / wrzucenie z dysku albo wrzucanie tekstu - jak to zrobic?
         <div className="element-container">
             <label>Element:</label>
             <br/>
             <input text="text" placeholcer="informacje..."  onChange={(e)=>setElementValue(e.target.value)}></input>
             <br/>
+            <div className="elem-add-file">
+              <label>Przeciągnij element lub wybierz z dysku</label>
+              <input type="file"></input>
+              </div>           
             <input text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
             <br/>
             <button onClick={SaveElem}>Zapisz</button>

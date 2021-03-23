@@ -14,6 +14,7 @@ const sections ={
 
 const AppProvider = ({children}) =>{
 
+    console.log(sections.section_li)
  
     const [state,dispatch] = useReducer(reducer,sections)
 
@@ -26,10 +27,14 @@ const AppProvider = ({children}) =>{
         dispatch({type:'ADD_NEW_SECTION',opened_section_id:opened_section_id, section_name:section_name,parent_section_id:parent_section_id})
     }
 
+    const AddNewElement = (section_id,elemId,elemValue,elemTag,elemType) =>{
+        dispatch({type:'ADD_NEW_ELEMENT',section_id:section_id,element_id:elemId,element_value:elemValue,element_tag:elemTag,element_type:elemType})
+    }
+
 
     return (
         <AppContext.Provider
-            value={{...state,Toggle,AddNewSection}}>
+            value={{...state,Toggle,AddNewSection,AddNewElement}}>
                 {children}
         </AppContext.Provider>
     )

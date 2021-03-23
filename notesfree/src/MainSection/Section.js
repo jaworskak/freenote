@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect } from 'react'
 import './Section.css'
 import {useGlobalContext} from '../context'
 import Element from './Element'
@@ -7,6 +7,11 @@ const Section = (props) =>{
 
      
     const {Toggle} = useGlobalContext()
+    const [addNewElem,setAddNewElem] = useState(false)
+
+   // useEffect(()=>{
+    //  setAddNewElem(false)
+   // })
 
     return (
         <div> 
@@ -16,10 +21,11 @@ const Section = (props) =>{
               <h3>{props.section_name}</h3>
             </div>
             <div className="section-actv-continer">
-              <Element/>   
+              {addNewElem &&
+              <Element section_id={props.section_id}/> }        
             </div>
             <div className="section-actv-footer">
-             <button className="section-actv-add-elem">Dodaj nowy element do <b>{props.section_name}</b></button> 
+             <button className="section-actv-add-elem" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <b>{props.section_name}</b></button> 
               <button className="section-actv-add-sect">Dodaj nową sekcję do <b>{props.section_name}</b></button>         
             </div>
         </div>

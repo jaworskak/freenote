@@ -8,7 +8,7 @@ const MainSection = () =>{
 
     const {section_list,opened_section_id}  = useGlobalContext()
     return (
-        
+ 
         <div className="mainsection">
             {        
             section_list.length>0 &&
