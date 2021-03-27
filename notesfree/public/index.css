@@ -4,9 +4,15 @@
 }
 
 .containertree{
-    background: rgb(248, 245, 241);
+    background: red;
     min-width: 100vw;
     min-height: 100vh;
+    z-index:1;
+    margin-top:-10%;
+}
+
+.rootcontainer{
+    z-index: 2;
 }
 
 canvas{
