@@ -13,9 +13,10 @@
     border: none;
 }
 
-
+ 
 .section.active{
-    background: #e9896a;
+    border:2px solid #343f56;
+    background: none;
 }
 
 .section{
@@ -23,11 +24,13 @@
     padding: 10px 0;
     border-bottom: 2px solid #343f56;
     z-index: 3;
+    background-color: #343f56;
 }
 
 .section-actv-navbar{
-    color:#343f56;
+    color:whitesmoke;
     padding: 1%;
     font-size: x-large;
     border-bottom: 2px solid #343f56;
+    background-color: #343f56;
 }
