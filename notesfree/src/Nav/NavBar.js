@@ -5,7 +5,7 @@ import '../App.css'
 const NavBar = () =>{
     return (
         <nav className="navbar">
-            <button>style</button>
+           <h2>Notatnik</h2>
         </nav>
     )
 }

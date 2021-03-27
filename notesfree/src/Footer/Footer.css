@@ -1,6 +1,6 @@
 .footer{
-     max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
-	height: 5vh;
+      max-width: 92vw;  /* wielkosc wzgleden obszaru roboczego */
+	height: 6vh;
 }
 
 .btn-add-section{
@@ -8,23 +8,50 @@
  border: 1 px solid black;
  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
  height:6vh;
- margin:0.5%;
  font-size: 1.5rem;
+ border-radius: 10px 0px 10px 0px;
+ padding:0.5%;
+ background:linear-gradient(to bottom, #343f56,#4d5d80,#28344d);
+ color:whitesmoke
+}
+
+.btn-section-add{
+     float:right;
+     padding: 2%;
+     font-size: 1.rem;
+     background:rgb(248, 245, 241);
+     margin-right: 10%;
+     border-radius: 5px 5px 5px 5px;
+     color:#343f56;
 }
 
 .modal{
      position: absolute;
      width:60vw;
-     height:40vh;
+     height:20vh;
      /* zeby bylo zawsze na srodku */
      left:50%;
      top:50%;
      transform: translate(-50%, -50%); /* pozycja zawsze na środku*/
-     background: linear-gradient(to bottom, rgb(212,213,215), rgb(121,215,253)); 
-     border:2px solid darkblue;
+     background:linear-gradient(to bottom, #343f56,#4d5d80,#28344d); 
      box-shadow: 5px 10px 8px 10px rgb(77, 74, 74);
+     border-radius: 200px 0px 200px 200px;
+     border:2px solid whitesmoke;
+     box-sizing: border-box;
 }
 
 .modalSectionName{
-       justify-content: center;
+       padding:5%;
+       left:50%;
+}
+
+.modalSectionName label{
+     font-size: x-large;
+     color:white;
+     margin: 1%;
+}
+
+.modalSectionName input{
+     font-size: x-large;
+     max-width: 15vw;
 }

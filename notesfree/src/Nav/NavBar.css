@@ -1,5 +1,10 @@
 .navbar{
-    background-color: blue;
-    max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
+    background:linear-gradient(to bottom, #343f56,#4d5d80,#28344d); 
+    max-width: 85vw;  /* wielkosc wzgleden obszaru roboczego */
 	height: 10vh;
+    border: 2px solid #343f56;
+    border-radius: 0px 0px 10px 10px;
+    margin-left:5vw;
+    color:whitesmoke;
+    padding: 1%;
 }

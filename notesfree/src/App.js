@@ -7,8 +7,8 @@ import './App.css'
 function App() {
 
   return (
-    <div className="App snowtrees">   
-      <NavBar/>
+    <div className="App">  
+        <NavBar/>
     <MainSection/>
       <Footer />
     </div>
