@@ -1,6 +1,7 @@
 .footer{
       max-width: 92vw;  /* wielkosc wzgleden obszaru roboczego */
 	height: 6vh;
+     z-index: -1;
 }
 
 .btn-add-section{
@@ -38,6 +39,7 @@
      border-radius: 200px 0px 200px 200px;
      border:2px solid whitesmoke;
      box-sizing: border-box;
+     z-index:3;
 }
 
 .modalSectionName{

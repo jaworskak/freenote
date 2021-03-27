@@ -1,6 +1,8 @@
 .App{
    font-family: Arial, Helvetica, sans-serif;
    color:black;
+   z-index: 3;
+    position: relative;
 }
 
 /* losowanie kolorów - w zależności od tego jaki background zostanie wylosowany takie będą głowne kolory nabv, footer, sekcji */
