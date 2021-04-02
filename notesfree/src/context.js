@@ -23,7 +23,6 @@ const AppProvider = ({children}) =>{
     }
 
     const AddNewSection = (parent_section_id,opened_section_id, section_name) =>{
-        window.generateRandomTree();
         dispatch({type:'ADD_NEW_SECTION',opened_section_id:opened_section_id, section_name:section_name,parent_section_id:parent_section_id})
     }
 

@@ -5,8 +5,7 @@ import {useGlobalContext} from '../context'
 
 const Footer = (props) =>{
 
-      const ShowModal = () =>{
-          window.generateRandomTree();
+      const ShowModal = () =>{     
         setModalAddSectionOpen(true);
     }
    

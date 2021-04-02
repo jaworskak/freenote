@@ -6,31 +6,30 @@
 
 .section-actv-add-elem,.section-actv-add-sect{
     float:right;
-    background-color: #343f56;
     color:white;
     padding: 0.5rem;
     margin: 0.5%;
-    border: none;
+    border:2px solid #880088;
+    background-color: rgba(172, 73, 150, 0.5);
 }
 
  
 .section.active{
-    border:2px solid #343f56;
+    border:2px solid #880088;
     background: none;
+    background-color: rgba(255,255,255,0.5);
 }
 
 .section{
     text-align: center;
-    padding: 10px 0;
-    border-bottom: 2px solid #343f56;
+    min-height: 5vh;;
+    border-bottom: 2px solid #cc0000;
     z-index: 3;
-    background-color: #343f56;
+    background-color: rgba(235, 139, 139, 0.5);
 }
 
 .section-actv-navbar{
-    color:whitesmoke;
-    padding: 1%;
     font-size: x-large;
-    border-bottom: 2px solid #343f56;
-    background-color: #343f56;
+    border-bottom: 2px solid #cc0000;
+     background-color: rgba(172, 73, 150, 0.5);
 }
