@@ -13,7 +13,7 @@
  border-radius: 10px 0px 10px 0px;
  padding:0.5%;
  color:whitesmoke;
- background-color: #880088;
+ background-color: #343f56;
 }
 
 .btn-section-add{
@@ -25,7 +25,7 @@
      border-radius: 10px 0px 10px 0px;
      padding:0.5%;
      color:whitesmoke;
-     background-color: #880088;
+     background-color: #343f56;
 }
 
 .modal{
@@ -38,7 +38,7 @@
      transform: translate(-50%, -50%); /* pozycja zawsze na środku*/
      box-shadow: 5px 10px 8px 10px rgb(107, 92, 92);
      border-radius: 200px 0px 200px 200px;
-     border:2px solid #5f015f;
+     border:2px solid #343f56;
      box-sizing: border-box;
      z-index:3;
      background-image: linear-gradient(to right, #f5f0eb , #e0dcd8);
@@ -51,7 +51,7 @@
 
 .modalSectionName label{
      font-size: x-large;
-     color:#880088;
+     color:#343f56;
      margin: 1%;
 }
 

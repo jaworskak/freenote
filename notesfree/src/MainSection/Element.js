@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState,useRef} from 'react'
 import './Element.css'
 import {useGlobalContext} from '../context'
 
@@ -20,6 +20,9 @@ const {AddNewElement} = useGlobalContext()
 const [elementValue,setElementValue] = useState("");
 const [tag, setTag] = useState("")
 
+const fileInputField = useRef(null);
+const [file, setFile] = useState({})
+
 const SaveElem = () =>{
   console.log(elementValue)
   console.log(tag)
@@ -37,17 +40,17 @@ const SaveElem = () =>{
             <label className="elemInstruction"><b>Wklej tekst/link/zadanie lub obraz:</b></label>
             <div className="elemInputContainer">
             <div className="elemInputText">
-                  <input text="text" placeholcer="informacje..."  onChange={(e)=>setElementValue(e.target.value)}></input>
+                  <textarea text="text" placeholder="Notatki - ważny tekst / link do strony/ zadanie 'to-do'"  onChange={(e)=>setElementValue(e.target.value)}></textarea>
             </div>          
             <div className="elemInputPhoto">
               <label>Przeciągnij element lub wybierz z dysku</label>
               <br/>
-              <input type="file"></input>
+              <input type="file" ref={fileInputField}></input>
             </div>
             <div className="elemInputTag">
               <input text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
               <br/>
-               <button className="elemSaveBtn" onClick={SaveElem}>Zapisz</button>
+               <button className="elemSave" onClick={SaveElem}>Zapisz</button>
             </div>                   
             </div>
         </div>

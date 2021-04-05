@@ -1,19 +1,27 @@
 .element-container {
-  padding: 1%;
   border: 1px solid black;
 }
 
+.elemInstruction{
+   height: 15vh;
+}
 
 .elemInputContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+   height: 25vh;
 } 
 
-.elemInputText{
-    background-color: red;
+.elemInputText textarea{
+     width: 100%;
+     height: 100%;
+     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+     box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
 .elemInputPhoto{
-    background-color: blue;
+    border:2px solid #343f56;
 }
 .elemInputTag{
     background-color: green;
@@ -24,7 +32,7 @@
     color:white;
     padding: 0.5rem;
     margin: 0.5%;
-    border:2px solid #880088;
+    border:2px solid #343f56;
     background-color: rgba(172, 73, 150, 0.5);
 }
 
