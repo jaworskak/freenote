@@ -17,7 +17,7 @@
 .section.active{
     border:2px solid #343f56;
     background: none;
-    background-color: rgba(230, 107, 107, 0.5);
+    background-color: rgba(230, 107, 107, 0.2);
 }
 
 .section{
@@ -25,11 +25,11 @@
     min-height: 5vh;;
     border-bottom: 2px solid #343f56;
     z-index: 3;
-    background-color: rgba(230, 107, 107, 0.5);
+    background-color: rgba(52, 63, 86, 0.8);
 }
 
 .section-actv-navbar{
     font-size: x-large;
     border-bottom: 2px solid #343f56;
-     background-color: rgba(230, 107, 107, 0.5);
+     background-color: #343f56;
 }

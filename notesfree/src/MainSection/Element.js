@@ -1,6 +1,8 @@
-import React, {useState,useRef} from 'react'
+import React, {useState} from 'react'
 import './Element.css'
 import {useGlobalContext} from '../context'
+import FileUpload from './FileUpload'
+
 
 const Element = (props) =>{
 
@@ -20,8 +22,7 @@ const {AddNewElement} = useGlobalContext()
 const [elementValue,setElementValue] = useState("");
 const [tag, setTag] = useState("")
 
-const fileInputField = useRef(null);
-const [file, setFile] = useState({})
+
 
 const SaveElem = () =>{
   console.log(elementValue)
@@ -35,6 +36,10 @@ const SaveElem = () =>{
   AddNewElement(props.section_id,1,elementValue,tag,1);
 }
 
+  const updateUploadedFiles = (files) =>{
+    console.log('wrzucone zdjecie')
+  };
+
     return ( // todo: albo przeciaganie elementu / wrzucenie z dysku albo wrzucanie tekstu - jak to zrobic?
         <div className="element-container">
             <label className="elemInstruction"><b>Wklej tekst/link/zadanie lub obraz:</b></label>
@@ -43,14 +48,17 @@ const SaveElem = () =>{
                   <textarea text="text" placeholder="Notatki - ważny tekst / link do strony/ zadanie 'to-do'"  onChange={(e)=>setElementValue(e.target.value)}></textarea>
             </div>          
             <div className="elemInputPhoto">
-              <label>Przeciągnij element lub wybierz z dysku</label>
-              <br/>
-              <input type="file" ref={fileInputField}></input>
+              <FileUpload
+                  accept=".jpg,.png,.jpeg"
+                  label="Profile Image(s)"
+                  multiple
+                  updateFilesCb={updateUploadedFiles}
+              />
             </div>
             <div className="elemInputTag">
-              <input text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
+              <input  text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
               <br/>
-               <button className="elemSave" onClick={SaveElem}>Zapisz</button>
+               <button className="elemSaveBtn" onClick={SaveElem}>Zapisz</button>
             </div>                   
             </div>
         </div>

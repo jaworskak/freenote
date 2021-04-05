@@ -41,6 +41,7 @@
      border:2px solid #343f56;
      box-sizing: border-box;
      z-index:3;
+     color: #343f56;
      background-image: linear-gradient(to right, #f5f0eb , #e0dcd8);
 }
 
