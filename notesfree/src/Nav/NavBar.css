@@ -1,7 +1,17 @@
 .navbar{
-
     max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
 	height: 10vh;
-    color:whitesmoke;
     padding: 1%;
+    font-family: 'Bangers', cursive;
+    font-size:3vw; 
+}
+
+.navbar h2{
+    color:#d11821;
+    text-shadow: 2px 2px #5c5454;
+}
+
+.navbar h2 span{
+    color:#880088;
+    font-size: 5vw;;
 }

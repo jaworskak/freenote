@@ -34,17 +34,22 @@ const SaveElem = () =>{
 
     return ( // todo: albo przeciaganie elementu / wrzucenie z dysku albo wrzucanie tekstu - jak to zrobic?
         <div className="element-container">
-            <label>Element:</label>
-            <br/>
-            <input text="text" placeholcer="informacje..."  onChange={(e)=>setElementValue(e.target.value)}></input>
-            <br/>
-            <div className="elem-add-file">
+            <label className="elemInstruction"><b>Wklej tekst/link/zadanie lub obraz:</b></label>
+            <div className="elemInputContainer">
+            <div className="elemInputText">
+                  <input text="text" placeholcer="informacje..."  onChange={(e)=>setElementValue(e.target.value)}></input>
+            </div>          
+            <div className="elemInputPhoto">
               <label>Przeciągnij element lub wybierz z dysku</label>
+              <br/>
               <input type="file"></input>
-              </div>           
-            <input text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
-            <br/>
-            <button onClick={SaveElem}>Zapisz</button>
+            </div>
+            <div className="elemInputTag">
+              <input text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
+              <br/>
+               <button className="elemSaveBtn" onClick={SaveElem}>Zapisz</button>
+            </div>                   
+            </div>
         </div>
     )
 }
