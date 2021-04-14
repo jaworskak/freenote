@@ -22,6 +22,8 @@ const MainSection = () =>{
     // jak klikne w dana sekcje to ona powinna sie otworzyc - get bedzie potem pobieral zagniezdzone sekcje na razie nie
     // na razie na onclick otwieram i zamykam daną sekcję
 
+    console.log(sectionList)
+
     return (
  
         <div className="mainsection">
@@ -29,12 +31,12 @@ const MainSection = () =>{
             sectionList.length>0 &&
             <div>
             {sectionList.map((section)=>{
-                 const {section_id, section_name} = section  
+                 const {_id, section_name} = section  
                 return(
-                <div onClick={()=>OpenSection(section_id)} key={section_id} >
+                <div onClick={()=>OpenSection(_id)} key={_id} >
                     <Section 
-                    key={section_id} 
-                    section_id={section_id} 
+                    key={_id} 
+                    section_id={_id} 
                     section_name={section_name} 
                     open={openedSectionId} />
                 </div>           

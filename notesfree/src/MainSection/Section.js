@@ -1,16 +1,22 @@
-import React, {useState } from 'react'
+import React, {useState,useEffect } from 'react'
 import './Section.css'
 import {useGlobalContext} from '../context'
 import Element from './Element'
+import axios from 'axios';
 
 const Section = (props) =>{
 
     const {Toggle} = useGlobalContext()
     const [addNewElem,setAddNewElem] = useState(false)
+    const [SectionElements,setSectionElements] = useState([])
 
-   // useEffect(()=>{
-    //  setAddNewElem(false)
-   // })
+     useEffect(async()=>{
+        const result = await axios.get('http://localhost:5000/notedElements/')
+        setSectionElements(result.data)
+    },[]) // pobranie wszystkich elementów w sekcji (potem jeszcze ogarnac sekcje w sekcji)
+
+    console.log(SectionElements)
+    
 
     return (
         <div> 
@@ -18,6 +24,21 @@ const Section = (props) =>{
         <div className="section active">
             <div className="section-actv-navbar">
               <h3>{props.section_name}</h3>
+            </div>
+            <div>
+               {SectionElements.map((element)=>{
+                 const {_id,is_text_note_link,photo_name,photo_url,section_id,tag,text_note } = element  
+                return(
+                <div key={_id} >
+                   <p>{tag}</p>
+                   <p>{text_note}</p>
+                   <p>{photo_name}</p>
+                   <p>{is_text_note_link}</p>
+                   <p>{photo_url}</p>
+                   <p>{section_id}</p>
+                </div>           
+                )
+            })}  
             </div>
             <div className="section-actv-continer">
               {addNewElem &&

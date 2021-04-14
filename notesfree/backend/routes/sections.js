@@ -15,10 +15,8 @@ router.route('/:id').get((req, res) => {
 
 router.route('/add').post((req, res) => { // podajemy nowego usera 
   const section_name = req.body.section_name;
-  const section_id = 1
 
   const newSection = new Section({
-      section_id,
       section_name,
       });
 

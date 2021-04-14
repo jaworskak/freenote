@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './Footer.css'
 import '../App.css'
 import {useGlobalContext} from '../context'
+import axios from 'axios';
 
 const Footer = (props) =>{
 
@@ -16,7 +17,14 @@ const Footer = (props) =>{
     
       const BtnAddNewSection = ()=>{
           setModalAddSectionOpen(false);
-          AddNewSection(parent_section_id,opened_section_id,newSectionName)
+         // AddNewSection(parent_section_id,opened_section_id,newSectionName)
+
+        const section = {
+            section_name: newSectionName
+        }
+        axios.post('http://localhost:5000/sections/add', section)
+        .then(res => console.log(res.data));
+
       }
  
     return (
