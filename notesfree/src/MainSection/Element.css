@@ -1,5 +1,6 @@
 .element-container {
   border: 1px solid black;
+    box-sizing: border-box;
 }
 
 .elemInstruction{
@@ -8,8 +9,7 @@
 
 .elemInputContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-   height: 25vh;
+  grid-template-columns: 40% 40% 20%
 } 
 
 .elemInputText textarea{
@@ -34,9 +34,7 @@
 
 .elemInputTag input{
   margin-top: 5vh;
-  size:10%;
-  height: 10vh;
-  font-size: 30pt;
+  font-size: 1.5vw;
   border-radius: 20px 20px 20px 20px;
   border:2px solid #343f56;
   color:#343f56;
