@@ -8,7 +8,7 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/:id').get((req, res) => {
-  notedElem.findById(req.params.id)
+  notedElem.find({section_id:req.params.id})
     .then(elem => res.json(elem))
     .catch(err => res.status(400).json('Error: ' + err));
 });

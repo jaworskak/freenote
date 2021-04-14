@@ -11,7 +11,7 @@ const Section = (props) =>{
     const [SectionElements,setSectionElements] = useState([])
 
      useEffect(async()=>{
-        const result = await axios.get('http://localhost:5000/notedElements/')
+        const result = await axios.get('http://localhost:5000/notedElements/'+props.section_id)
         setSectionElements(result.data)
     },[]) // pobranie wszystkich elementów w sekcji (potem jeszcze ogarnac sekcje w sekcji)
 
