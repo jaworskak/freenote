@@ -18,6 +18,7 @@ import './FileUpload.css'
 const KILO_BYTES_PER_BYTE = 1000;
 const DEFAULT_MAX_FILE_SIZE_IN_BYTES = 500000;
 
+
 const convertNestedObjectToArray = (nestedObj) =>
   Object.keys(nestedObj).map((key) => nestedObj[key]);
 
@@ -49,11 +50,13 @@ const FileUpload = ({
   };
 
   const callUpdateFilesCb = (files) => {
+    
     const filesAsArray = convertNestedObjectToArray(files);
     updateFilesCb(filesAsArray);
   };
 
   const handleNewFileUpload = (e) => {
+    setFileAdded(true)
     const { files: newFiles } = e.target;
     if (newFiles.length) {
       let updatedFiles = addNewFiles(newFiles);
@@ -62,15 +65,12 @@ const FileUpload = ({
     }
   };
 
-  const removeFile = (fileName) => {
-    delete files[fileName];
-    setFiles({ ...files });
-    callUpdateFilesCb({ ...files });
-  };
+  const [fileAdded,setFileAdded]= useState(false)
+
 
   return (
     <>
-    <div className={`photoInput ${fileInputField.current? "":"active" }`}>
+    <div className={`photoInput ${fileAdded? "":"active" }`}>
       <FileUploadContainer>
         <DragDropText>Przeciągnij zdjęcie lub załącz z dysku</DragDropText>
         <UploadFileBtn type="button" onClick={handleUploadBtnClick}>
@@ -87,7 +87,7 @@ const FileUpload = ({
         />
       </FileUploadContainer>
       </div>
-      <div className={`addedPhoto ${fileInputField.current? "active":"" }`}>
+      <div className={`addedPhoto ${fileAdded? "active":"" }`}>
       <FilePreviewContainer>
         <PreviewList>
           {Object.keys(files).map((fileName, index) => {

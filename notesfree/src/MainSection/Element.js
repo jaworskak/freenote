@@ -20,6 +20,7 @@ function validURL(str) {
 
 const [elementValue,setElementValue] = useState("");
 const [tag, setTag] = useState("")
+const [fileName, setFileName] = useState("")
 
 
 
@@ -29,7 +30,7 @@ const SaveElem = () =>{
       text_note : elementValue,
       is_text_note_link:validURL(elementValue),
       photo_url:"photo_url",
-      photo_name:"photo_name",
+      photo_name:fileName,
       tag:tag,
       section_id: props.section_id
   }
@@ -38,6 +39,7 @@ const SaveElem = () =>{
 }
 
   const updateUploadedFiles = (files) =>{
+    setFileName(files[0].name)
     console.log('w tym miejscu zapis zdjęcia do pliku')
   };
 
