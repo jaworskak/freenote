@@ -22,7 +22,7 @@ const Section = (props) =>{
             </div>
             <div className="section-actv-continer">
               {addNewElem &&
-              <Element section_id={props.section_id}/> }        
+              <Element section_id={props.section_id} section_name={props.section_name}/> }        
             </div>
             <div className="section-actv-footer">
              <button className="section-actv-add-elem" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <b>{props.section_name}</b></button> 

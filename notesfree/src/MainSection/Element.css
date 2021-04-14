@@ -5,6 +5,7 @@
 
 .elemInstruction{
    height: 15vh;
+   padding: 3%;
 }
 
 .elemInputContainer {
@@ -46,7 +47,6 @@
 
 
 .elemSaveBtn{
-    float:right;
     color:white;
     padding: 0.5rem;
     margin: 0.5%;

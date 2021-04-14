@@ -9,7 +9,6 @@ export const FileUploadContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
 `;
 
 export const FormField = styled.input`
@@ -49,7 +48,7 @@ export const UploadFileBtn = styled.button`
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
-  border: 2px solid #3498db;
+  border: 2px solid #343f56;
   cursor: pointer;
   font-size: 1rem;
   line-height: 1;
@@ -58,7 +57,7 @@ export const UploadFileBtn = styled.button`
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 6px;
-  color: #3498db;
+  color: #343f56;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -132,14 +131,9 @@ export const UploadFileBtn = styled.button`
 export const FilePreviewContainer = styled.article`
   margin-bottom: 35px;
 
-  span {
-    font-size: 14px;
-  }
 `;
 
 export const PreviewList = styled.section`
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 10px;
 
   @media only screen and (max-width: 400px) {
@@ -157,7 +151,6 @@ export const FileMetaData = styled.div`
   bottom: 0;
   padding: 10px;
   border-radius: 6px;
-  color: white;
   font-weight: bold;
   background-color: rgba(5, 5, 5, 0.55);
 
@@ -177,41 +170,14 @@ export const RemoveFileIcon = styled.i`
 `;
 
 export const PreviewContainer = styled.section`
-  padding: 0.25rem;
-  width: 20%;
-  height: 120px;
-  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   box-sizing: border-box;
 
-  &:hover {
-    opacity: 0.55;
-
-    ${FileMetaData} {
-      display: flex;
-    }
-  }
-
-  & > div:first-of-type {
-    height: 100%;
-    position: relative;
-  }
-
-  @media only screen and (max-width: 750px) {
-    width: 25%;
-  }
-
-  @media only screen and (max-width: 500px) {
-    width: 50%;
-  }
-
-  @media only screen and (max-width: 400px) {
-    width: 100%;
-    padding: 0 0 0.4em;
-  }
 `;
 
 export const ImagePreview = styled.img`
-  border-radius: 6px;
-  width: 100%;
+  width: 30vw;
   height: 100%;
 `;

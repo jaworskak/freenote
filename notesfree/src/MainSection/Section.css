@@ -17,12 +17,11 @@
     border:2px solid #343f56;
     background: none;
     background-color: rgba(230, 107, 107, 0.2);
-    
 }
 
 .section{
     text-align: center;
-    min-height: 5vh;;
+    min-height: 5vh;
     border-bottom: 2px solid #343f56;
     z-index: 3;
     background-color: rgba(52, 63, 86, 0.8);

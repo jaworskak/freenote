@@ -37,12 +37,12 @@ const SaveElem = () =>{
 }
 
   const updateUploadedFiles = (files) =>{
-    console.log('wrzucone zdjecie')
+    console.log('w tym miejscu zapis zdjęcia do pliku')
   };
 
     return ( // todo: albo przeciaganie elementu / wrzucenie z dysku albo wrzucanie tekstu - jak to zrobic?
         <div className="element-container">
-            <label className="elemInstruction"><b>Wklej tekst/link/zadanie lub obraz:</b></label>
+            <label className="elemInstruction"><b><br/>Wklej tekst/link/zadanie lub obraz:<br/></b></label>
             <div className="elemInputContainer">
             <div className="elemInputText">
                   <textarea text="text" placeholder="Notatki - ważny tekst / link do strony/ zadanie 'to-do'"  onChange={(e)=>setElementValue(e.target.value)}></textarea>
@@ -58,7 +58,7 @@ const SaveElem = () =>{
             <div className="elemInputTag">
               <input  text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
               <br/>
-               <button className="elemSaveBtn" onClick={SaveElem}>Zapisz</button>
+               <button className="elemSaveBtn" onClick={SaveElem}>Zapisz do sekcji {props.section_name}</button>
             </div>                   
             </div>
         </div>
