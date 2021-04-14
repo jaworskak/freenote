@@ -1,0 +1,20 @@
+.photoInput{
+    display: none;
+}
+
+.photoInput.active{
+    display: block;
+}
+
+.addedPhoto{
+    display: none;
+}
+
+.addedPhoto.active{
+    display: block;
+}
+
+
+
+
+

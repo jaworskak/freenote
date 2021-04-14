@@ -13,6 +13,8 @@ import {
   InputLabel
 } from "./FileUpload.styles";
 
+import './FileUpload.css'
+
 const KILO_BYTES_PER_BYTE = 1000;
 const DEFAULT_MAX_FILE_SIZE_IN_BYTES = 500000;
 
@@ -68,12 +70,12 @@ const FileUpload = ({
 
   return (
     <>
+    <div className={`photoInput ${fileInputField.current? "":"active" }`}>
       <FileUploadContainer>
-        <InputLabel>{label}</InputLabel>
-        <DragDropText>Drag and drop your files anywhere or</DragDropText>
+        <DragDropText>Przeciągnij zdjęcie lub załącz z dysku</DragDropText>
         <UploadFileBtn type="button" onClick={handleUploadBtnClick}>
           <i className="fas fa-file-upload" />
-          <span> Upload {otherProps.multiple ? "files" : "a file"}</span>
+          <span> Dodaj zdjęcie</span>
         </UploadFileBtn>
         <FormField
           type="file"
@@ -84,8 +86,9 @@ const FileUpload = ({
           {...otherProps}
         />
       </FileUploadContainer>
+      </div>
+      <div className={`addedPhoto ${fileInputField.current? "active":"" }`}>
       <FilePreviewContainer>
-        <span>To Upload</span>
         <PreviewList>
           {Object.keys(files).map((fileName, index) => {
             let file = files[fileName];
@@ -115,6 +118,7 @@ const FileUpload = ({
           })}
         </PreviewList>
       </FilePreviewContainer>
+      </div>
     </>
   );
 };
