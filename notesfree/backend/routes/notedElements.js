@@ -7,6 +7,12 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/:id').get((req, res) => {
+  notedElem.findById(req.params.id)
+    .then(elem => res.json(elem))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 router.route('/add').post((req, res) => { // podajemy nowego usera 
     const text_note = req.body.text_note;
     const is_text_note_link = req.body.is_text_note_link;

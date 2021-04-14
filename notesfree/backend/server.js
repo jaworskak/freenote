@@ -21,7 +21,7 @@ connection.once('open', () => {
 const notedElementsRouter = require('./routes/notedElements');
 const sectionsRouter = require('./routes/sections');
 
-app.use('/notedElems', notedElementsRouter);
+app.use('/notedElements', notedElementsRouter);
 app.use('/sections', sectionsRouter);
 
 app.listen(port, () => {

@@ -5,7 +5,6 @@ import Element from './Element'
 
 const Section = (props) =>{
 
-     
     const {Toggle} = useGlobalContext()
     const [addNewElem,setAddNewElem] = useState(false)
 

@@ -7,6 +7,12 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/:id').get((req, res) => {
+  Section.findById(req.params.id)
+    .then(sect => res.json(sect))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
 router.route('/add').post((req, res) => { // podajemy nowego usera 
   const section_name = req.body.section_name;
   const section_id = 1

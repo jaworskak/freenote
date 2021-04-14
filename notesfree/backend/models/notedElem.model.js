@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const notedElemSchema = new Schema({
-  text_note: { type: Number, required: true },
+  text_note: { type: String, required: true },
   is_text_note_link: {type: Boolean, required:true },
   photo_url: { type: String, required: true },
   photo_name: {type: String, required: true},
