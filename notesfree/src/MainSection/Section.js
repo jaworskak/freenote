@@ -15,8 +15,6 @@ const Section = (props) =>{
         setSectionElements(result.data)
     },[]) // pobranie wszystkich elementów w sekcji (potem jeszcze ogarnac sekcje w sekcji)
 
-    console.log(SectionElements)
-    
 
     return (
         <div> 

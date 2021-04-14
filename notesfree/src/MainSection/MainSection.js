@@ -22,8 +22,7 @@ const MainSection = () =>{
     // jak klikne w dana sekcje to ona powinna sie otworzyc - get bedzie potem pobieral zagniezdzone sekcje na razie nie
     // na razie na onclick otwieram i zamykam daną sekcję
 
-    console.log(sectionList)
-
+  
     return (
  
         <div className="mainsection">

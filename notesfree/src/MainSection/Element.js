@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Element.css'
-import {useGlobalContext} from '../context'
 import FileUpload from './FileUpload'
+import axios from 'axios';
 
 
 const Element = (props) =>{
@@ -17,7 +17,6 @@ function validURL(str) {
   return !!pattern.test(str);
 }
 
-const {AddNewElement} = useGlobalContext()
 
 const [elementValue,setElementValue] = useState("");
 const [tag, setTag] = useState("")
@@ -25,15 +24,17 @@ const [tag, setTag] = useState("")
 
 
 const SaveElem = () =>{
-  console.log(elementValue)
-  console.log(tag)
 
-  // czy jest linkiem?
-  if(validURL(elementValue)){
-    console.log('link')
+  const newElem ={
+      text_note : elementValue,
+      is_text_note_link:validURL(elementValue),
+      photo_url:"photo_url",
+      photo_name:"photo_name",
+      tag:tag,
+      section_id: props.section_id
   }
-
-  AddNewElement(props.section_id,1,elementValue,tag,1);
+   axios.post('http://localhost:5000/notedElements/add', newElem)
+        .then(res => console.log(res.data));
 }
 
   const updateUploadedFiles = (files) =>{

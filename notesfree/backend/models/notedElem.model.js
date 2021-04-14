@@ -8,7 +8,7 @@ const notedElemSchema = new Schema({
   photo_url: { type: String, required: true },
   photo_name: {type: String, required: true},
   tag: {type:String, required: true},
-  section_id: { type: Number, required: true }
+  section_id: { type: String, required: true }
 }, {
   timestamps: true,
 });
