@@ -33,6 +33,13 @@
      background-color: #343f56;
 }
 
-.addedElem{
-   border-bottom: 2px solid black;
-}   
+.addedElementsContainer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+@media (min-width:1000px){
+    .addedElementsContainer{
+        grid-template-columns: repeat(3,1fr);
+    }
+}

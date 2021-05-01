@@ -1,0 +1,22 @@
+.singleAddedElem{
+    border:2px solid #343f56;
+    background-color: rgba(230, 107, 107, 0.5);
+    margin: 0.1em 0.1em 0.1em 0.1em;
+    color:#343f56;
+    display: grid;
+     grid-template-columns: repeat(2,1fr);
+}
+
+.singleTag{
+    grid-column: 1/-1;
+    background-color: rgba(230, 107, 107, 0.8);
+    padding: 0.5em;
+}
+
+.singleText{
+    padding: 1em;
+}
+
+.singlePhoto{
+    padding: 1em;
+}

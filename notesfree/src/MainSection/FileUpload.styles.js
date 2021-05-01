@@ -178,6 +178,6 @@ export const PreviewContainer = styled.section`
 `;
 
 export const ImagePreview = styled.img`
-  width: 30vw;
-  height: 100%;
+  width: 10vw;
+  height: 10vh;
 `;

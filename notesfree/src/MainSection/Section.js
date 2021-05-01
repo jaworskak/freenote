@@ -3,6 +3,7 @@ import './Section.css'
 import {useGlobalContext} from '../context'
 import Element from './Element'
 import axios from 'axios';
+import AddedElement from './AddedElement'
 
 const Section = (props) =>{
 
@@ -28,17 +29,12 @@ const Section = (props) =>{
             <div className="section-actv-navbar">
               <h3>{props.section_name}</h3>
             </div>
-            <div>
+            <div className="addedElementsContainer">
                {SectionElements.map((element)=>{
                  const {_id,is_text_note_link,photo_name,photo_url,section_id,tag,text_note } = element  
                 return(
-                <div key={_id}  className="addedElem">
-                   <p>{tag}</p>
-                   <p>{text_note}</p>
-                   <p>{photo_name}</p>
-                   <p>{is_text_note_link}</p>
-                   <p>{photo_url}</p>
-                   <p>{section_id}</p>
+                <div key={_id}>
+                  <AddedElement tag={tag} text_note={text_note} photo_name={photo_name} is_text_note_link={is_text_note_link} photo_url={photo_url} section_id={section_id}/>
                 </div>           
                 )
             })}  
