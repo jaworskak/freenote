@@ -36,6 +36,9 @@ const SaveElem = () =>{
   }
    axios.post('http://localhost:5000/notedElements/add', newElem)
         .then(res => console.log(res.data));
+
+    // zamykanie okna dodawania nowego elementu
+    props.onChange()
 }
 
   const updateUploadedFiles = (files) =>{

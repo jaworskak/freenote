@@ -11,9 +11,14 @@ const Section = (props) =>{
     const [SectionElements,setSectionElements] = useState([])
 
      useEffect(async()=>{
+       console.log('wywolanie fetch')
         const result = await axios.get('http://localhost:5000/notedElements/'+props.section_id)
         setSectionElements(result.data)
-    },[]) // pobranie wszystkich elementów w sekcji (potem jeszcze ogarnac sekcje w sekcji)
+    },[addNewElem]) // pobranie wszystkich elementów w sekcji (potem jeszcze ogarnac sekcje w sekcji)
+
+    function newEelementAdded(){ // zamykamy okno dodawania nowego elementu
+      setAddNewElem(false)
+    }
 
 
     return (
@@ -27,7 +32,7 @@ const Section = (props) =>{
                {SectionElements.map((element)=>{
                  const {_id,is_text_note_link,photo_name,photo_url,section_id,tag,text_note } = element  
                 return(
-                <div key={_id} >
+                <div key={_id}  className="addedElem">
                    <p>{tag}</p>
                    <p>{text_note}</p>
                    <p>{photo_name}</p>
@@ -40,7 +45,7 @@ const Section = (props) =>{
             </div>
             <div className="section-actv-continer">
               {addNewElem &&
-              <Element section_id={props.section_id} section_name={props.section_name}/> }        
+              <Element section_id={props.section_id} section_name={props.section_name} onChange={newEelementAdded} /> }        
             </div>
             <div className="section-actv-footer">
              <button className="section-actv-add-elem" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <b>{props.section_name}</b></button> 
