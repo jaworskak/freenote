@@ -33,9 +33,7 @@ const Section = (props) =>{
                {SectionElements.map((element)=>{
                  const {_id,is_text_note_link,photo_name,photo_url,section_id,tag,text_note } = element  
                 return(
-                <div key={_id}>
-                  <AddedElement tag={tag} text_note={text_note} photo_name={photo_name} is_text_note_link={is_text_note_link} photo_url={photo_url} section_id={section_id}/>
-                </div>           
+                  <AddedElement key={_id} tag={tag} text_note={text_note} photo_name={photo_name} is_text_note_link={is_text_note_link} photo_url={photo_url} section_id={section_id}/>         
                 )
             })}  
             </div>

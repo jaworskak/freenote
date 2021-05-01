@@ -3,9 +3,11 @@ import './AddedElement.css'
 import test from  './test.jpg'
 
 export default function AddedElement(props) {
-    console.log(props.is_text_note_link)
+   const text_len = props.text_note.length
+   
+    console.log(text_len)
     return (
-        <div className="singleAddedElem">
+        <div className={`singleAddedElem ${text_len>20? "long_text": ""}`}>
             <h3 className="singleTag">{props.tag}</h3>
             {props.is_text_note_link===false &&
             <p className="singleText">{props.text_note}</p> }

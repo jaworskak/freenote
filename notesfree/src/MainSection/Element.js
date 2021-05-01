@@ -32,8 +32,10 @@ const SaveElem = () =>{
       photo_url:"photo_url",
       photo_name:fileName,
       tag:tag,
-      section_id: props.section_id
+      section_id: props.section_id,
+      text_length: elementValue.length,
   }
+  console.log(newElem)
    axios.post('http://localhost:5000/notedElements/add', newElem)
         .then(res => console.log(res.data));
 
