@@ -13,22 +13,39 @@
 
 }
 
+.btn-add-section-efect{
+    z-index:-3;
+    padding:0.5%;
+    border-bottom:3px solid;
+    border-right:3px solid;
+    border-color:rgb(42,73,116);
+    border-radius: 0px 0px 10px 0px;
 
+    transition: 1s border-color;
+    transition-delay:0.2s;
+}
+
+.btn-add-section-efect:hover{
+    border-color: white;
+}
 
 .btn-add-section{
  position:fixed;
  right:1vh;
  top:1vh;
- border: 1 px solid white;
- font-size: 0.2rem;
- padding:0.5%;
- color:red;
+ font-size: 1rem;
+ padding:1%;
+ color:white;
+ border:1px solid white;
+ border-radius: 10px 10px 10px 10px;
  background-color:  rgb(42,73,116);
+ z-index:3;
 }
+
 
 @media (min-width:1000px){
     .btn-add-section{
-        height:6vh;
+        height:10vh;
         font-size: 1.5rem;
     }
 

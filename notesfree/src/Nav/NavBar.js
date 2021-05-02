@@ -30,10 +30,12 @@ const NavBar = () =>{
     return (
         <nav className="navbar">
            <h2>Notatnik</h2>
-              <button className="btn-add-section" onClick={ShowModal}>Dodaj nową sekcję do 
+              <button className="btn-add-section" onClick={ShowModal}>
+              <div className="btn-add-section-efect">
+              Dodaj nową sekcję do 
             { parent_section_id===0 && <b> głównego widoku</b>}
             {parent_section_id!==0 && <b> {parent_section_name}</b>}
-             </button>
+             </div></button>
                 { ModalAddSectionOpen &&
          <div className="modal">
              <div className="modalSectionName">

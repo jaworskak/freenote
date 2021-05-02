@@ -9,7 +9,7 @@
 
 .singleAddedElem.long_text{
      grid-template-columns: repeat(2,1fr);
-     grid-column: 1 / span 2;
+    
 }
 
 .singleTag{
