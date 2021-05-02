@@ -2,16 +2,79 @@
     max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
 	height: 10vh;
     padding: 1%;
-    font-family: 'Bangers', cursive;
+    font-family: 'Antonio', sans-serif;
     font-size:3vw; 
+    background-color: rgb(42,73,116);
+    position:relative;
 }
 
 .navbar h2{
-    color:#e9896a;
-    text-shadow: 2px 2px #5c5454;
+    color:white;
+
 }
 
-.navbar h2 span{
-    color:#343f56;
-    font-size: 5vw;;
+
+
+.btn-add-section{
+ position:fixed;
+ right:1vh;
+ top:1vh;
+ border: 1 px solid white;
+ font-size: 0.2rem;
+ padding:0.5%;
+ color:red;
+ background-color:  rgb(42,73,116);
 }
+
+@media (min-width:1000px){
+    .btn-add-section{
+        height:6vh;
+        font-size: 1.5rem;
+    }
+
+}
+
+.btn-section-add{
+     float:right;
+     border: 1 px solid black;
+     height:6vh;
+     font-size: 1rem;
+     width:10vw;
+     padding:0.5%;
+     color:white;
+     background-color:  rgb(42,73,116);
+}
+
+.modal{
+     position: absolute;
+     width:60vw;
+     height:20vh;
+     /* zeby bylo zawsze na srodku */
+     left:50%;
+     top:50%;
+     transform: translate(-50%, -50%); /* pozycja zawsze na środku*/
+     box-shadow: 5px 10px 8px 10px rgb(107, 92, 92);
+     border-radius: 200px 0px 200px 200px;
+     border:2px solid #343f56;
+     box-sizing: border-box;
+     z-index:3;
+     color: #343f56;
+     background-image: linear-gradient(to right, #f5f0eb , #e0dcd8);
+}
+
+.modalSectionName{
+       padding:5%;
+       left:50%;
+}
+
+.modalSectionName label{
+     font-size: x-large;
+     color:#343f56;
+     margin: 1%;
+}
+
+.modalSectionName input{
+     font-size: x-large;
+     max-width: 15vw;
+}
+

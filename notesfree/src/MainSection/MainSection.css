@@ -1,10 +1,8 @@
 .mainsection{
     max-width: 100vw;  /* wielkosc wzgleden obszaru roboczego */
-	  height: 71vh; 
+	  height: 85vh; 
     overflow-y: auto;
-    border:2px solid #343f56;
     z-index: 3;
-    margin:1%;
 }
 
 
