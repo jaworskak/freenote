@@ -6,7 +6,9 @@ import axios from 'axios';
 
 const NavBar = () =>{
 
-     const ShowModal = () =>{     
+     const ShowModal = () =>{   
+         console.log("zrobic szare tlo za otwartym modalem")  
+        // document.getElementsByClassName("mainsection").style.display='block'
         setModalAddSectionOpen(true);
     }
 
