@@ -2,7 +2,6 @@
     max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
 	height: 10vh;
     padding: 1%;
-    font-family: 'Antonio', sans-serif;
     font-size:3vw; 
     background-color: rgb(42,73,116);
     position:relative;
@@ -16,8 +15,8 @@
 .btn-add-section-efect{
     z-index:-3;
     padding:0.5%;
-    border-bottom:3px solid;
-    border-right:3px solid;
+    border-bottom:2px solid;
+    border-right:2px solid;
     border-color:rgb(42,73,116);
     border-radius: 0px 0px 10px 0px;
 
@@ -26,7 +25,8 @@
 }
 
 .btn-add-section-efect:hover{
-    border-color: white;
+     border-image:
+      linear-gradient(45deg, white, rgb(155,111,118)) 1;
 }
 
 .btn-add-section{
