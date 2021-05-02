@@ -40,8 +40,7 @@ const NavBar = () =>{
          <div className="modal">
              <div className="modalSectionName">
                  <form>
-                <label>Nazwa sekcji:</label>
-                <input type="text"  onChange={(e)=>setNewsetionName(e.target.value)}></input>
+                <input type="text" placeholder="Nazwa sekcji" onChange={(e)=>setNewsetionName(e.target.value)}></input>
                 </form>
                 <button className="btn-section-add" onClick={()=>BtnAddNewSection()}>Dodaj</button>
             </div>          
