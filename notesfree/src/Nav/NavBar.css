@@ -3,9 +3,10 @@
 	height: 10vh;
     padding: 1%;
     font-size:3vw; 
-   background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
+    background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
     position:relative;
-     z-index:1000;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .navbar h2{
@@ -13,10 +14,7 @@
 
 }
 
-.btn-add-section{
- position:fixed;
- right:1vh;
- top:1vh;
+.btn-search-section{
  font-size: 1rem;
  padding:1%;
  color:white;
@@ -24,6 +22,20 @@
  border-radius: 10px 10px 10px 10px;
  background-color:  rgb(42,73,116);
  z-index:3;
+ height:fit-content;
+ width: fit-content;
+}
+
+.btn-add-section{
+ font-size: 1rem;
+ padding:1%;
+ color:white;
+ border:1px solid white;
+ border-radius: 10px 10px 10px 10px;
+ background-color:  rgb(42,73,116);
+ z-index:3;
+ height:fit-content;
+ width: fit-content;
 }
 
 .btn-add-section:hover{
@@ -34,7 +46,9 @@
 
 @media (min-width:1000px){
     .btn-add-section{
-        height:10vh;
+        font-size: 1.5rem;
+    }
+    .btn-search-section{
         font-size: 1.5rem;
     }
 

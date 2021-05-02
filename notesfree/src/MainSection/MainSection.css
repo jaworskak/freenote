@@ -1,6 +1,6 @@
 .mainsection{
     max-width: 100vw;  /* wielkosc wzgleden obszaru roboczego */
-	  height: 86.5vh; 
+	height: 86.5vh; 
     overflow-y: auto;
     z-index: 3;
     display:grid;
