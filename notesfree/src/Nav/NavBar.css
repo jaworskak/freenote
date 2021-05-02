@@ -5,25 +5,13 @@
     font-size:3vw; 
    background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
     position:relative;
+     z-index:1000;
 }
 
 .navbar h2{
     color:white;
 
 }
-
-/*.btn-add-section-efect{
-    z-index:-3;
-    padding:0.5%;
-    border-bottom:2px solid;
-    border-right:2px solid;
-    border-color:rgb(42,73,116);
-    border-radius: 0px 0px 10px 0px;
-
-    transition: 1s border-color;
-    transition-delay:0.2s;
-}*/
-
 
 .btn-add-section{
  position:fixed;
@@ -79,11 +67,23 @@
      top:50%;
      transform: translate(-50%, -50%); /* pozycja zawsze na środku*/
      box-shadow: inset 0 0 7px rgb(173,201,240);
-    border: 2px solid white;
+     border: 2px solid white;
      box-sizing: border-box;
      color:white;
-     z-index:3;
+      z-index:3;
      background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
+}
+
+.modalOverlay{
+      position:fixed;
+      width:100vw;
+      height:100vh;
+      top:0;
+      left:0;
+      background-color:black;
+      overflow: hidden;
+      z-index:2;
+      background: rgba(122, 125, 123, 0.6);
 }
 
 .modalSectionName{   

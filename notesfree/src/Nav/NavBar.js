@@ -7,7 +7,7 @@ import axios from 'axios';
 const NavBar = () =>{
 
      const ShowModal = () =>{   
-         console.log("zrobic szare tlo za otwartym modalem")  
+         console.log(document.getElementsByClassName("mainsection").style)  
         // document.getElementsByClassName("mainsection").style.display='block'
         setModalAddSectionOpen(true);
     }
@@ -39,6 +39,7 @@ const NavBar = () =>{
             {parent_section_id!==0 && <b> {parent_section_name}</b>}
              </div></button>
                 { ModalAddSectionOpen &&
+        <div className="modalOverlay">
          <div className="modal">
              <div className="modalSectionName">
                  <form>
@@ -46,6 +47,7 @@ const NavBar = () =>{
                 </form>
                 <button className="btn-section-add" onClick={()=>BtnAddNewSection()}>Dodaj</button>
             </div>          
+         </div>
          </div>
             }
         </nav>
