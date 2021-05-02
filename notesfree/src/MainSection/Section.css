@@ -11,13 +11,14 @@
 }
 
  
-.section.active{
-
-}
 
 .section{
-    text-align: center;
+     position: absolute;
     z-index: 3;
+     top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
 }
 
 .section-actv-navbar{
@@ -28,14 +29,4 @@
 .addedElementsContainer{
     display: grid;
     
-}
-@media (min-width:750px){
-    .addedElementsContainer{
-       
-    }
-}
-@media (min-width:1600px){
-    .addedElementsContainer{
-      
-    }
 }

@@ -25,8 +25,9 @@
     background-color:rgb(42,73,116, 0.8);
     border-radius: 5px;
     color:white;
-     padding:10px;
-     
+    padding:2px;
+    text-align: center;
+     position: relative;
 }
 
 .sectionListItem:hover{
