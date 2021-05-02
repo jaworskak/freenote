@@ -10,11 +10,11 @@
 .sectionList{
     padding:1vw;
     display: grid;
-    grid-gap:2px;
+    grid-gap:3px;
     font-size: 0.7rem;
     /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr,1fr) ) ;*/
     grid-template-columns: 50% 50%;
-    border-right:2px solid rgb(42,73,116);
+    border-right:10px solid rgb(42,73,116, 0.8);
     background-color:rgb(216, 220, 227, 0.6);
 }
 
