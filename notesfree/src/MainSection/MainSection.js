@@ -28,11 +28,11 @@ const MainSection = () =>{
         <div className="mainsection">
             {        
             sectionList.length>0 &&
-            <div>
-            {sectionList.map((section)=>{
+            <div className="sectionList">
+                 {sectionList.map((section)=>{
                  const {_id, section_name} = section  
-                return(
-                <div onClick={()=>OpenSection(_id)} key={_id} >
+                return( // tutaj trzeba sprawdzac jak zrobic rozne rozmairy
+                <div className={`sectionListItem ${section_name==="gotowanie"? "importantItem":""}`} onClick={()=>OpenSection(_id)} key={_id} >
                     <Section 
                     key={_id} 
                     section_id={_id} 
@@ -40,11 +40,13 @@ const MainSection = () =>{
                     open={openedSectionId} />
                 </div>           
                 )
-            })}  
+            })} 
             </div>    
             }  
+            <div className="currentSection">
+            </div>
         </div>
-    )
+    )  
 }
 
 export default MainSection
