@@ -32,7 +32,7 @@ const MainSection = () =>{
                  {sectionList.map((section)=>{
                  const {_id, section_name} = section  
                 return( // tutaj trzeba sprawdzac jak zrobic rozne rozmairy
-                <div className={`sectionListItem ${section_name==="gotowanie" || section_name==="meble"? "importantItem":""}`} onClick={()=>OpenSection(_id)} key={_id} >
+                <div className={`sectionListItem ${section_name.length>10 ? "importantItem":""}`} onClick={()=>OpenSection(_id)} key={_id} >
                     <Section 
                     key={_id} 
                     section_id={_id} 
