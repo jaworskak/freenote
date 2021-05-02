@@ -11,7 +11,7 @@ const MainSection = () =>{
     const [openedSectionId, setOpenedSectionId] = useState(0)
 
     const OpenSection = (section_id) =>{
-        setOpenedSectionId(section_id)
+        //setOpenedSectionId(section_id)
 
     }
 
