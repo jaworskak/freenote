@@ -12,13 +12,16 @@ const Section = (props) =>{
     const [SectionElements,setSectionElements] = useState([])
 
      useEffect(async()=>{
-       console.log('wywolanie fetch')
         const result = await axios.get('http://localhost:5000/notedElements/'+props.section_id)
         setSectionElements(result.data)
     },[addNewElem]) // pobranie wszystkich elementów w sekcji (potem jeszcze ogarnac sekcje w sekcji)
 
     function newEelementAdded(){ // zamykamy okno dodawania nowego elementu
+       console.log('props onchange1')
       setAddNewElem(false)
+      // info do parenta zeby odswiezyc liste sekcji
+      console.log('props onchange')
+      props.onChange()
     }
 
 

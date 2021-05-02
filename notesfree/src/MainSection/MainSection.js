@@ -8,10 +8,18 @@ const MainSection = () =>{
 
   
     const [sectionList,setSectionList] = useState([])
-    const [openedSectionId, setOpenedSectionId] = useState(0)
+   const [openedSectionId, setOpenedSectionId] = useState(0)
+    const [addedSection, setAddedSection] = useState(0)
 
     const OpenSection = (section_id) =>{
         //setOpenedSectionId(section_id)
+
+    }
+
+    function refreshSectionList(){
+        console.log('dodana nowa sekcja')
+        var newSection = addedSection + 1
+        setAddedSection(newSection)
 
     }
 
@@ -32,12 +40,13 @@ const MainSection = () =>{
                  {sectionList.map((section)=>{
                  const {_id, section_name} = section  
                 return( // tutaj trzeba sprawdzac jak zrobic rozne rozmairy
-                <div className={`sectionListItem ${section_name.length>10 ? "importantItem":""}`} onClick={()=>OpenSection(_id)} key={_id} >
+                <div className={`sectionListItem ${section_name.length>9 ? "importantItem":""}`} onClick={()=>OpenSection(_id)} key={_id} >
                     <Section 
                     key={_id} 
                     section_id={_id} 
                     section_name={section_name} 
-                    open={openedSectionId} />
+                    open={openedSectionId} 
+                    onChange={refreshSectionList}/>
                 </div>           
                 )
             })} 

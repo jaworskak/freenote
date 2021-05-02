@@ -12,7 +12,7 @@ const NavBar = () =>{
         setModalAddSectionOpen(true);
     }
 
-    const {parent_section_id,parent_section_name,opened_section_id,AddNewSection} = useGlobalContext()
+    const {parent_section_id,parent_section_name} = useGlobalContext()
     const [ModalAddSectionOpen,setModalAddSectionOpen] = useState(false)
     const [newSectionName,setNewsetionName] = useState("")
 
