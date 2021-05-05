@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
     position:relative;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 30% 70%;
 }
 
 .navbar h2{
@@ -14,45 +14,28 @@
 
 }
 
-.btn-search-section{
- font-size: 1rem;
- padding:1%;
- color:white;
- border:1px solid white;
- border-radius: 10px 10px 10px 10px;
- background-color:  rgb(42,73,116);
- z-index:3;
- height:fit-content;
- width: fit-content;
+.navbar_menu{
+    display:grid;
+    grid-template-columns: 33% 33% 33%;
 }
 
-.btn-add-section{
- font-size: 1rem;
- padding:1%;
- color:white;
- border:1px solid white;
- border-radius: 10px 10px 10px 10px;
- background-color:  rgb(42,73,116);
- z-index:3;
- height:fit-content;
- width: fit-content;
+.navbar_menu_btn{
+    height: 5vh;
+    align-self: center; /*na srodku*/
+    background-color:rgb(42,73,116, 0.8);
+    border-radius: 5px;
+    color:white;
+    padding:2px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-color: rgb(8, 56, 122);
+    margin-left:1%;
 }
 
-.btn-add-section:hover{
-       box-shadow: inset 0 0 60px rgb(173,201,240);
+.navbar_menu_btn:hover{
+       box-shadow: inset 0 0 20px rgb(173,201,240);
 }
 
-
-
-@media (min-width:1000px){
-    .btn-add-section{
-        font-size: 1.5rem;
-    }
-    .btn-search-section{
-        font-size: 1.5rem;
-    }
-
-}
 
 .btn-section-add{
      float:right;
