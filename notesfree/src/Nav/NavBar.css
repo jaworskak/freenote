@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
     position:relative;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 50% 50%;
 }
 
 .navbar h2{
@@ -17,24 +17,37 @@
 .navbar_menu{
     display:grid;
     grid-template-columns: 33% 33% 33%;
-}
-
-.navbar_menu_btn{
-    height: 5vh;
     align-self: center; /*na srodku*/
-    background-color:rgb(42,73,116, 0.8);
-    border-radius: 5px;
-    color:white;
-    padding:2px;
-    text-align: center;
-    font-size: 1.2rem;
-    border-color: rgb(8, 56, 122);
-    margin-left:1%;
+    grid-gap:1vw;
 }
 
-.navbar_menu_btn:hover{
-       box-shadow: inset 0 0 20px rgb(173,201,240);
+/*buttons*/
+
+.navbar_menu_btn {
+  width: 15vw;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  margin:1%;
+  transition: 1s ease-in-out;
 }
+
+
+
+.navbar_menu_btn:hover {
+  transition: 1s ease-in-out;
+  background: #3776b4;
+}
+
+.navbar_menu_btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/*buttons*/
 
 
 .btn-section-add{
@@ -49,7 +62,8 @@
 }
 
 .btn-section-add:hover{
-       box-shadow: inset 0 0 20px rgb(173,201,240);
+    transition: 1s ease-in-out;
+    background: #3776b4;
 }
 
 
@@ -68,7 +82,7 @@
      box-sizing: border-box;
      color:white;
       z-index:3;
-     background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
+     background: #3776b4;
 }
 
 .modalOverlay{

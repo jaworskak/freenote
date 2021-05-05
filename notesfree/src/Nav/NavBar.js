@@ -32,13 +32,18 @@ const NavBar = () =>{
     return (
         <nav className="navbar">
            <h2>Notatnik</h2>
-           <div className="navbar_menu">
-                <button className="navbar_menu_btn btn-search-section"><input placeholder="Wyszukaj..."></input></button>
-                <button className="navbar_menu_btn">Zaloguj/wyloguj</button>
-                <button className="navbar_menu_btn btn-add-section" onClick={ShowModal}>
-                Dodaj nową sekcję do głównego widoku
-             </button>
+           <div className="navbar_menu">                      
+            <button class="navbar_menu_btn search">
+                <span>WYSZUKAJ</span>
+            </button>
+            <button class="navbar_menu_btn add" onClick={ShowModal}>
+                <span>DODAJ SEKCJĘ</span>
+            </button>
+            <button class="navbar_menu_btn login">
+                <span>ZALOGUJ</span>
+            </button>
            </div>
+
                 { ModalAddSectionOpen &&
         <div className="modalOverlay">
          <div className="modal">
