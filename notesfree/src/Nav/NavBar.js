@@ -3,6 +3,7 @@ import './NavBar.css'
 import '../App.css'
 import {useGlobalContext} from '../context'
 import axios from 'axios';
+import logo from './logo.png'
 
 const NavBar = () =>{
 
@@ -31,7 +32,7 @@ const NavBar = () =>{
 
     return (
         <nav className="navbar">
-           <h2>Notatnik</h2>
+           <img src={logo} alt="logo" className="logo"></img>
            <div className="navbar_menu">                      
             <button class="navbar_menu_btn search">
                 <span>WYSZUKAJ</span>
