@@ -14,6 +14,14 @@ const Section = (props) =>{
      useEffect(async()=>{
         const result = await axios.get('http://localhost:5000/notedElements/'+props.section_id)
         setSectionElements(result.data)
+
+        const section = document.getElementById(props.section_id)
+        
+        // TODO - COS TU JEST NIE TAK POWINNAM SPRAWDZAC ILOSC ELEMENTOW W DATA ZEBY STOPNIOWAC KOLORY
+        if(typeof result.data[0]!=='undefined'){ // elements exists
+          section.style.backgroundColor='rgb(42,73,116, 1)';
+        }
+         
     },[addNewElem]) // pobranie wszystkich elementów w sekcji (potem jeszcze ogarnac sekcje w sekcji)
 
     function newEelementAdded(){ // zamykamy okno dodawania nowego elementu
@@ -23,6 +31,9 @@ const Section = (props) =>{
       console.log('props onchange')
       props.onChange()
     }
+
+   
+    
 
 
     return (

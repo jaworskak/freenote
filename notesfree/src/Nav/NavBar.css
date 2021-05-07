@@ -1,12 +1,12 @@
 .navbar{
-    max-width: 99vw;  /* wielkosc wzgleden obszaru roboczego */
+    max-width: 98vw;  /* wielkosc wzgleden obszaru roboczego */
 	height: 10vh;
     padding: 1%;
     font-size:3vw; 
     background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
     position:relative;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
 }
 
 .navbar h2{
@@ -31,7 +31,6 @@
   border: 1px solid #91C9FF;
   outline: none;
   margin:1%;
-  transition: 1s ease-in-out;
 }
 
 
