@@ -6,7 +6,7 @@
     background-image: linear-gradient(to right, rgb(49,88,143),rgb(42,73,116));
     position:relative;
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 65% 35%;
 }
 
 .navbar h2{
@@ -18,19 +18,17 @@
     display:grid;
     grid-template-columns: 33% 33% 33%;
     align-self: center; /*na srodku*/
-    grid-gap:1vw;
 }
 
 /*buttons*/
 
 .navbar_menu_btn {
-  width: 15vw;
+  width: 10vw;
   height: 60px;
   cursor: pointer;
   background: transparent;
   border: 1px solid #91C9FF;
   outline: none;
-  margin:1%;
 }
 
 
