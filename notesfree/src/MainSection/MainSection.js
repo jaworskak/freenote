@@ -12,7 +12,7 @@ const MainSection = () =>{
     const [addedSection, setAddedSection] = useState(0)
 
     const OpenSection = (section_id) =>{
-        //setOpenedSectionId(section_id)
+        setOpenedSectionId(section_id)
 
     }
 
@@ -49,7 +49,7 @@ const MainSection = () =>{
                     key={_id} 
                     section_id={_id} 
                     section_name={section_name} 
-                    open={openedSectionId} 
+                    open={0} // tu nigdy nie pokazujemy otwartych 
                     onChange={refreshSectionList}/>
                 </div>           
                 )
