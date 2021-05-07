@@ -32,7 +32,7 @@ const NavBar = () =>{
 
     return (
         <nav className="navbar">
-           <img src={logo} alt="logo" className="logo"></img>
+            <div className="logo"></div>
            <div className="navbar_menu">                      
             <button class="navbar_menu_btn search">
                 <span>WYSZUKAJ</span>
