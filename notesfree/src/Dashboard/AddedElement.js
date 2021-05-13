@@ -1,5 +1,5 @@
 import React from 'react'
-import './AddedElement.css'
+import '../index.css'
 import test from  './test.jpg'
 
 export default function AddedElement(props) {

@@ -1,5 +1,5 @@
 import React, {useState,useEffect } from 'react'
-import './Section.css'
+import '../index.css'
 import {useGlobalContext} from '../context'
 import Element from './Element'
 import axios from 'axios';

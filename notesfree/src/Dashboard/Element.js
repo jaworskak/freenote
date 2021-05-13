@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './Element.css'
+import '../index.css'
 import FileUpload from './FileUpload'
 import axios from 'axios';
 
