@@ -5,19 +5,11 @@ import axios from 'axios';
 const Dashboard = (props) =>{
 
   
-    const [sectionList,setSectionList] = useState([])
-   const [openedSectionId, setOpenedSectionId] = useState(0)
-    const [addedSection, setAddedSection] = useState(0)
-
+    const [sectionList,setSectionList] = useState([]) // lista sekcji wyswietlana po lewej
+    const [openedSectionId, setOpenedSectionId] = useState(0) // ktora sekcja jest teraz otwarta
+  
     const OpenSection = (section_id) =>{
         setOpenedSectionId(section_id)
-
-    }
-
-    function refreshSectionList(){
-        var newSection = addedSection + 1
-        setAddedSection(newSection)
-
     }
 
     useEffect(async()=>{
@@ -27,9 +19,8 @@ const Dashboard = (props) =>{
     },[props.newSection]) // jak przyjda nowe propertisy to sie przeladuje?
 
   
-    return (
- 
-        <div className="mainsection">
+    return ( 
+        <div className="dashboard"> 
             {        
             sectionList.length>0 &&
             <div className="sectionList">
@@ -46,7 +37,7 @@ const Dashboard = (props) =>{
                     section_id={_id} 
                     section_name={section_name} 
                     open={0} // tu nigdy nie pokazujemy otwartych 
-                    onChange={refreshSectionList}/>
+                    />
                 </div>           
                 )
             })} 

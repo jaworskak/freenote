@@ -1,18 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Nunito', sans-serif;
-  box-sizing: border-box;
-  overflow:hidden;
-}
-
-ul {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-}
-
 :root{
   --main-blue: rgb(42,73,116);
   --light-blue: rgb(55,118,180);
@@ -22,6 +7,26 @@ a {
   --transition: all 0.3s linear;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+  overflow:hidden;
+}
+
+body{
+  background-color: var(--main-blue);
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+
 
 .rootcontainer{
     background: url(background.jpeg);
@@ -30,11 +35,17 @@ a {
 }
 
 
+.app-container{
+    width:100%;
+    height: 100%;
+
+}
+
 /* ---------------------------------------------NAVBAR------------------------------------------------------------- */
 .navbar{ 
     background-image: linear-gradient(to bottom, var(--light-blue),var(--main-blue));
     z-index:100;
-    position:fixed;
+    position:relative;
     width:100%;
 }
 
@@ -76,6 +87,9 @@ a {
 /*linki*/
 
 .navbar__links_container{
+  position:fixed;
+  width:100%; 
+  background-image: linear-gradient(to bottom, var(--light-blue),var(--main-blue));
   height:0;
   overflow:hidden; 
   transition: var(--transition); /*na malych ekranach widac dopiero po kliknieciu*/
@@ -113,6 +127,9 @@ a {
 
   .navbar__links_container{
     height: auto !important; /*na dużych widać wszystkie linki*/
+    position:relative;
+    width:auto; 
+    background-image:none ;
   }
 
   .links {
@@ -199,10 +216,6 @@ a {
   color: var(--main-blue);
 }
 
-
-
-
-
 @media (min-width:1000px){
 
     .modal_container{
@@ -225,70 +238,13 @@ a {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* todo*/
-
-
-
-
-/* main app container*/
-
-.app-container{
-    width:100%;
-    height: 100%;
-
-}
-
-
-
-
-
-.navbar h2{
-    color:white;
-
-}
-
-.navbar_menu{
-    display:grid;
-    grid-template-columns: 33% 33% 33%;
-    align-self: center; /*na srodku*/
-}
-
-
-/*buttons*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ---------------------------------------------DASHBOARD - CONTAINER------------------------------------------------------------- */
 
 /*dashboard*/
-.mainsection{
-    max-width: 100vw;  /* wielkosc wzgleden obszaru roboczego */
-	height: 92.5vh; 
-    overflow-y: auto;
-    z-index: 3;
-    display:grid;
-    grid-template-columns: 30vw 70vw;
+.dashboard{
+  height: 83vh;
+  display:grid;
+  grid-template-columns: 30vw 70vw;
 }
 
 .sectionList{
@@ -299,17 +255,6 @@ a {
     /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr,1fr) ) ;*/
     grid-template-columns: 50% 50%;
  
-    background-color:rgb(216, 220, 227, 0.6);
-}
-
-@media (min-width:1300px){
-    .sectionList{
-     grid-template-columns: 25% 25% 25% 25%;
-     font-size: 1rem;
-    }
-}
-
-.currentSection{
     background-color:rgb(216, 220, 227, 0.6);
 }
 
@@ -330,6 +275,27 @@ a {
 
 .sectionListItem.importantItem{
     grid-column: auto / span 2;
+}
+
+
+@media (min-width:1300px){
+    .sectionList{
+     grid-template-columns: 25% 25% 25% 25%;
+     font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.currentSection{
+    background-color:rgb(216, 220, 227, 0.6);
 }
 
 
