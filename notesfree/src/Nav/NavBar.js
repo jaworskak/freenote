@@ -49,6 +49,7 @@ const NavBar = () =>{
                         <FaHamburger />
                     </button>
             </div>
+            <hr/>
             <div className="navbar__links_container" ref={linksContainerRef}>
                 <ul className="links">
                     <li>
@@ -69,19 +70,6 @@ const NavBar = () =>{
                 </ul>
             </div>
 
-
-         {/*}   <div className="logo"></div>
-           <div className="navbar_menu">                      
-            <button class="navbar_menu_btn search">
-                <span>WYSZUKAJ</span>
-            </button>
-            <button class="navbar_menu_btn add" onClick={ShowModal}>
-                <span>DODAJ SEKCJĘ</span>
-            </button>
-            <button class="navbar_menu_btn login">
-                <span>ZALOGUJ</span>
-            </button>
-    </div>*/}
 
                 { ModalAddSectionOpen &&
         <div className="modalOverlay">
