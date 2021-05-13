@@ -15,8 +15,6 @@ router.route('/:id').get((req, res) => {
 
 router.route('/add').post((req, res) => { // podajemy nowego usera 
 
-  console.log(req.body)
-
     const text_note = req.body.text_note;
     const is_text_note_link = req.body.is_text_note_link;
     const photo_url = req.body.photo_url;
@@ -36,6 +34,8 @@ router.route('/add').post((req, res) => { // podajemy nowego usera
   newElem.save()
     .then(() => res.json('newElem added!'))
     .catch(err => res.status(400).json('Error: ' + err));
+
+
 });
 
 module.exports = router;

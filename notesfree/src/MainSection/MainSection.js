@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import './MainSection.css'
-import '../App.css'
 import Section from './Section'
 import axios from 'axios';
 
