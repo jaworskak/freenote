@@ -295,8 +295,6 @@ a {
 }
 
 
-/* ---------------------------------------------SINGLE SECTION------------------------------------------------------------- */
-
 .sectionListItem p{
      position: absolute;
     z-index: 3;
@@ -307,41 +305,70 @@ a {
 }
 
 
-
-
-
+/* ---------------------------------------------OPENED SECTION------------------------------------------------------------- */
 
 .currentSection{
-    background-color:rgb(216, 220, 227, 0.6);
+   background-color:rgb(216, 220, 227, 0.6);
+   padding:1rem;
+}
+
+.currentSection__navbar{
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    background-color:rgba(15, 33, 58, 0.8);
+    color:white;
+    border-bottom: 2px solid white;
 }
 
 
+.currentSection__add_container{
+    background-color:rgba(15, 33, 58, 0.8);
+    color:white;
+    border-top: white;
+}
 
-/*section*/
-
-.active{
-    display:grid;
+.currentSection__add_btn{
+  padding:0.5rem;
+  font-size: 1rem;
+  margin:0.5rem;
+  float:right;
+  background-color:rgb(42,73,116, 0.8);
+  color:white;
+  border: 1px solid #91C9FF;
 }
 
 
-.section-actv-add-elem,.section-actv-add-sect{
-    float:right;
-    color:#343f56;
-    padding: 0.5rem;
-    margin: 0.5%;
+.currentSection__add_btn:hover{
+   transition: 1s ease;
+   background-color:var(--accent-blue);
 }
 
- 
 
-.section-actv-navbar{
-    font-size: x-large;
-
-}
-
-.addedElementsContainer{
+.currentSection__elements{
     display: grid;
-    
+    min-height: 50vh;
+    background-color:rgb(42,73,116, 0.8); 
 }
+
+@media (min-width:800px){
+  .currentSection__elements{
+    min-height: 69vh;
+  }
+  .currentSection__navbar{
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 /*element*/
 .element-container {

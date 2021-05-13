@@ -21,17 +21,13 @@ const Section = (props) =>{
       console.log('props onchange')
       props.onChange()
     }
-
-   
-    
-
-
+ 
     return (  
-        <div className="section active">
-            <div className="section-actv-navbar">
+        <div>
+            <div className="currentSection__navbar">
               <h3>{props.section_name}</h3>
             </div>
-            <div className="addedElementsContainer">
+            <div className="currentSection__elements">
                {SectionElements.map((element)=>{
                  const {_id,is_text_note_link,photo_name,photo_url,section_id,tag,text_note } = element  
                 return(
@@ -43,9 +39,9 @@ const Section = (props) =>{
               {addNewElem &&
               <Element section_id={props.section_id} section_name={props.section_name} onChange={newEelementAdded} /> }        
             </div>
-            <div className="section-actv-footer">
-             <button className="section-actv-add-elem" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <b>{props.section_name}</b></button> 
-              <button className="section-actv-add-sect">Dodaj nową sekcję do <b>{props.section_name}</b></button>         
+            <div className="currentSection__add_container">
+             <button className="currentSection__add_btn" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <b>{props.section_name}</b></button> 
+              <button className="currentSection__add_btn">Dodaj nową sekcję do <b>{props.section_name}</b></button>         
             </div>
         </div>
     )
