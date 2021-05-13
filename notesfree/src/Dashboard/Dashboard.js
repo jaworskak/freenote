@@ -4,16 +4,16 @@ import axios from 'axios';
 
 const Dashboard = (props) =>{
 
-  
     const [sectionList,setSectionList] = useState([]) // lista sekcji wyswietlana po lewej
     const [openedSectionId, setOpenedSectionId] = useState(0) // ktora sekcja jest teraz otwarta
+    const [openedSectionName, setOpenedSectionName] = useState('') // nazwa otwartej sekcji
   
-    const OpenSection = (section_id) =>{
+    const OpenSection = (section_id, section_name) =>{ // ktora sekcja jest otwarta?
         setOpenedSectionId(section_id)
+        setOpenedSectionName(section_name)
     }
 
-    const timer = ms => new Promise(res => setTimeout(res, ms))
-
+    const timer = ms => new Promise(res => setTimeout(res, ms)) // powoli pokazujemy kafelki
     async function loadElements(){
         const sectionList = document.querySelectorAll('.sectionListItem')
         
@@ -23,7 +23,7 @@ const Dashboard = (props) =>{
         }
     }
 
-    useEffect(async()=>{
+    useEffect(async()=>{ // pobieram sekcje z bazy
         const result = await axios.get('http://localhost:5000/sections/')
         setSectionList(result.data)
         
@@ -39,25 +39,25 @@ const Dashboard = (props) =>{
             <div className="sectionList">
                  {sectionList.map((section)=>{
                  const {_id, section_name, elements_count } = section  
-                return( // tutaj trzeba sprawdzac jak zrobic rozne rozmairy
+                return( 
                 <div 
                 className={`sectionListItem ${section_name.length>9 ? "importantItem":"" } ${elements_count!=='0' ? "elements_inside":""}`} 
-                onClick={()=>OpenSection(_id)} 
-                key={_id} 
-                id={_id}>
-                    <Section 
-                    key={_id} 
-                    section_id={_id} 
-                    section_name={section_name} 
-                    open={0} // tu nigdy nie pokazujemy otwartych 
-                    />
+                onClick={()=>OpenSection(_id,section_name)} 
+                key={_id}>
+                   <p>{section_name}</p> 
                 </div>           
                 )
             })} 
             </div>    
             }  
+            {openedSectionId!==0 &&
             <div className="currentSection">
-            </div>
+                 <Section 
+                    key={openedSectionId} 
+                    section_id={openedSectionId} 
+                    section_name={openedSectionName} 
+                    />
+            </div>}
         </div>
     )  
 }

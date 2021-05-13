@@ -238,7 +238,7 @@ a {
 }
 
 
-/* ---------------------------------------------DASHBOARD - CONTAINER------------------------------------------------------------- */
+/* ---------------------------------------------DASHBOARD - SECTION LIST------------------------------------------------------------- */
 
 /*dashboard*/
 .dashboard{
@@ -295,8 +295,16 @@ a {
 }
 
 
+/* ---------------------------------------------SINGLE SECTION------------------------------------------------------------- */
 
-
+.sectionListItem p{
+     position: absolute;
+    z-index: 3;
+     top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
 
 
 
@@ -324,15 +332,6 @@ a {
 }
 
  
-
-.section{
-     position: absolute;
-    z-index: 3;
-     top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-}
 
 .section-actv-navbar{
     font-size: x-large;
