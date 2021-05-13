@@ -156,3 +156,57 @@
           margin-top:0.5%;
     }
 }
+
+
+
+
+/*dashboard*/
+.mainsection{
+    max-width: 100vw;  /* wielkosc wzgleden obszaru roboczego */
+	height: 92.5vh; 
+    overflow-y: auto;
+    z-index: 3;
+    display:grid;
+    grid-template-columns: 30vw 70vw;
+}
+
+.sectionList{
+    padding:1vw;
+    display: grid;
+    grid-gap:3px;
+    font-size: 0.7rem;
+    /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr,1fr) ) ;*/
+    grid-template-columns: 50% 50%;
+ 
+    background-color:rgb(216, 220, 227, 0.6);
+}
+
+@media (min-width:1300px){
+    .sectionList{
+     grid-template-columns: 25% 25% 25% 25%;
+     font-size: 1rem;
+    }
+}
+
+.currentSection{
+    background-color:rgb(216, 220, 227, 0.6);
+}
+
+.sectionListItem{
+    background-color:rgb(42,73,116, 0.8);
+    color:white;
+    padding:2px;
+     border: 1px solid #91C9FF;
+    text-align: center;
+     position: relative;
+}
+
+.sectionListItem:hover{
+    transition: 1s ease-in-out;
+    background: #3776b4;
+}
+
+
+.sectionListItem.importantItem{
+    grid-column: auto / span 2;
+}

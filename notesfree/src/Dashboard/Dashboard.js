@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import './MainSection.css'
+import '../index.css'
 import Section from './Section'
 import axios from 'axios';
 
@@ -16,7 +16,6 @@ const Dashboard = () =>{
     }
 
     function refreshSectionList(){
-        console.log('dodana nowa sekcja')
         var newSection = addedSection + 1
         setAddedSection(newSection)
 
