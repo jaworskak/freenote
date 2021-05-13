@@ -360,33 +360,28 @@ a {
   }
 }
 
+/* --------------------------------------------- ADD NEW ELEMENT ------------------------------------------------------------- */
 
 
+.currentSection__addNewElement{
+  color:white;
+}
 
-
-
-
-
-
-
-
-/*element*/
-.element-container {
+.addelement {
   border: 1px solid black;
-    box-sizing: border-box;
 }
 
-.elemInstruction{
-   height: 15vh;
-   padding: 3%;
+.add_element__label{
+  text-transform: capitalize;
+  font-size:1rem;
 }
 
-.elemInputContainer {
+.add_element__container {
   display: grid;
   grid-template-columns: 40% 40% 20%
 } 
 
-.elemInputText textarea{
+.add_element__container_text textarea{
      width: 100%;
      height: 100%;
      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -394,68 +389,71 @@ a {
      box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
-.elemInputPhoto{
+
+.add_element__container_photo{
     border:2px solid #343f56;
 }
 
-.elemInputText{
+.add_element__container_tag{
     border:2px solid #343f56;
 }
 
-.elemInputTag{
-    border:2px solid #343f56;
-}
-
-.elemInputTag input{
+.add_element__container_tag input{
   margin-top: 5vh;
   font-size: 1.5vw;
-  border-radius: 20px 20px 20px 20px;
   border:2px solid #343f56;
   color:#343f56;
 }
 
-.elemInputTag input::placeholder{
+.add_element__container_tag input::placeholder{
   color:#343f56;
 }
 
 
-.elemSaveBtn{
+.add_element__container_addbtn{
+    padding:0.5rem;
+    font-size: 1rem;
+    margin:0.5rem;
+    float:right;
+    background-color:rgb(42,73,116, 0.8);
     color:white;
-    padding: 0.5rem;
-    margin: 0.5%;
-    border:2px solid #343f56;
-    position:relative;
-    margin-top: 5.5vh;
+    border: 1px solid #91C9FF;
 }
 
+.add_element__container_addbtn span{
+  color:red;
+}
 
-/*added element*/
+/* --------------------------------------------- ADDED ELEMENTS  ------------------------------------------------------------- */
 
-.singleAddedElem{
-    border:2px solid #343f56;
-    background-color: rgba(230, 107, 107, 0.5);
-    margin: 0.1em 0.1em 0.1em 0.1em;
-    color:#343f56;
+.addedElem{
     display: grid;
-     grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1,1fr);
 }
 
-.singleAddedElem.long_text{
+.addedElem.long_text{
      grid-template-columns: repeat(2,1fr);
     
 }
 
-.singleTag{
-    padding: 0.5em;
+.addedElem__tag{
+    color:white;
     text-align: left;
-    grid-column: 1/-1;
+    text-transform: capitalize;
+    padding:0.5rem;
+    background-color:blueviolet;
+    height:5vh;
 }
 
-.singleText{
-    padding: 0.5em;
+.addElem a{
+  text-decoration: none;
+  background-color: blue;
+}
+
+.addedElem__text{
     text-align: left;
 }
 
-.singlePhoto{
+.addedElem__photo{
     padding: 0.5;
 }

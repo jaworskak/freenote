@@ -48,13 +48,13 @@ const SaveElem = () =>{
   };
 
     return ( // todo: albo przeciaganie elementu / wrzucenie z dysku albo wrzucanie tekstu - jak to zrobic?
-        <div className="element-container">
-            <label className="elemInstruction"><b><br/>Wklej tekst/link/zadanie lub obraz:<br/></b></label>
-            <div className="elemInputContainer">
-            <div className="elemInputText">
+        <div className="addelement">
+            <label className="add_element__label"><b><br/>Wklej tekst/link/zadanie lub obraz:<br/></b></label>
+            <div className="add_element__container">
+            <div className="add_element__container_text">
                   <textarea text="text" placeholder="Notatki - ważny tekst / link do strony/ zadanie 'to-do'"  onChange={(e)=>setElementValue(e.target.value)}></textarea>
             </div>          
-            <div className="elemInputPhoto">
+            <div className="add_element__container_photo">
               <FileUpload
                   accept=".jpg,.png,.jpeg"
                   label="Profile Image(s)"
@@ -62,10 +62,10 @@ const SaveElem = () =>{
                   updateFilesCb={updateUploadedFiles}
               />
             </div>
-            <div className="elemInputTag">
+            <div className="add_element__container_tag">
               <input  text="" placeholder="#tag..." onChange={(e)=>setTag(e.target.value)}></input>
               <br/>
-               <button className="elemSaveBtn" onClick={SaveElem}>Zapisz do sekcji {props.section_name}</button>
+               <button className="add_element__container_addbtn" onClick={SaveElem}>Zapisz do sekcji <span>{props.section_name}</span> </button>
             </div>                   
             </div>
         </div>

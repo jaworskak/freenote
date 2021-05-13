@@ -34,10 +34,10 @@ const Section = (props) =>{
                   <AddedElement key={_id} tag={tag} text_note={text_note} photo_name={photo_name} is_text_note_link={is_text_note_link} photo_url={photo_url} section_id={section_id}/>         
                 )
             })}  
-            </div>
-            <div className="section-actv-continer">
+             <div className="currentSection__addNewElement">
               {addNewElem &&
               <Element section_id={props.section_id} section_name={props.section_name} onChange={newEelementAdded} /> }        
+            </div>
             </div>
             <div className="currentSection__add_container">
              <button className="currentSection__add_btn" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <b>{props.section_name}</b></button> 
