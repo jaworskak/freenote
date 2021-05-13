@@ -254,7 +254,6 @@ a {
     font-size: 0.7rem;
     /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr,1fr) ) ;*/
     grid-template-columns: 50% 50%;
- 
     background-color:rgb(216, 220, 227, 0.6);
 }
 
@@ -265,6 +264,12 @@ a {
      border: 1px solid #91C9FF;
     text-align: center;
      position: relative;
+     opacity:0;
+     transition: opacity 1s;
+}
+
+.sectionListItem.visible{
+  opacity:1;
 }
 
 .sectionListItem.elements_inside{

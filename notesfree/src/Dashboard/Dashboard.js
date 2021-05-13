@@ -12,10 +12,24 @@ const Dashboard = (props) =>{
         setOpenedSectionId(section_id)
     }
 
+    const timer = ms => new Promise(res => setTimeout(res, ms))
+
+    async function loadElements(){
+        const sectionList = document.querySelectorAll('.sectionListItem')
+        
+        for(var i=0; i<sectionList.length;i++){
+            sectionList[i].classList.add("visible")
+            await timer(30);
+        }
+    }
+
     useEffect(async()=>{
         const result = await axios.get('http://localhost:5000/sections/')
         setSectionList(result.data)
-    },[props.newSection]) // jak przyjda nowe propertisy to sie przeladuje?
+        
+        loadElements()
+
+    },[props.newSection]) // jak przyjda nowe propertisy to sie przeladuje
 
   
     return ( 
