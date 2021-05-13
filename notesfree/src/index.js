@@ -9,7 +9,7 @@ ReactDOM.render(
     <AppProvider>
       <div className="app-container">
           <NavBar/>
-         
+          <Dashboard/>
       </div>
     </AppProvider> 
   </React.StrictMode>,

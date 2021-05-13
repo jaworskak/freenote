@@ -3,6 +3,7 @@ import {useGlobalContext} from '../context'
 import axios from 'axios';
 
 import { FaHamburger } from 'react-icons/fa'
+import {SiAddthis} from 'react-icons/si'
 
 const NavBar = () =>{
 
@@ -72,13 +73,13 @@ const NavBar = () =>{
 
 
                 { ModalAddSectionOpen &&
-        <div className="modalOverlay">
-         <div className="modal">
-             <div className="modalSectionName">
+        <div className="modal_overlay">
+         <div className="modal_container">
+             <div className="modal__input">
                  <form>
                 <input type="text" placeholder="Nazwa sekcji" onChange={(e)=>setNewsetionName(e.target.value)}></input>
                 </form>
-                <button className="btn-section-add" onClick={()=>BtnAddNewSection()}>Dodaj</button>
+                <button className="modal__input_btn" onClick={()=>BtnAddNewSection()}><SiAddthis/></button>
             </div>          
          </div>
          </div>
