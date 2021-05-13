@@ -34,6 +34,8 @@ a {
 .navbar{ 
     background-image: linear-gradient(to bottom, var(--light-blue),var(--main-blue));
     z-index:100;
+    position:fixed;
+    width:100%;
 }
 
 .navbar__logo_toggle_container{
