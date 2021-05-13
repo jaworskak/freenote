@@ -267,6 +267,10 @@ a {
      position: relative;
 }
 
+.sectionListItem.elements_inside{
+  background-color:rgba(15, 33, 58, 0.8);
+}
+
 .sectionListItem:hover{
     transition: 1s ease-in-out;
     background: #3776b4;

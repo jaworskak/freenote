@@ -13,7 +13,6 @@ const Dashboard = (props) =>{
     }
 
     useEffect(async()=>{
-        console.log('reload section list')
         const result = await axios.get('http://localhost:5000/sections/')
         setSectionList(result.data)
     },[props.newSection]) // jak przyjda nowe propertisy to sie przeladuje?
@@ -25,10 +24,10 @@ const Dashboard = (props) =>{
             sectionList.length>0 &&
             <div className="sectionList">
                  {sectionList.map((section)=>{
-                 const {_id, section_name} = section  
+                 const {_id, section_name, elements_count } = section  
                 return( // tutaj trzeba sprawdzac jak zrobic rozne rozmairy
                 <div 
-                className={`sectionListItem ${section_name.length>9 ? "importantItem":""}`} 
+                className={`sectionListItem ${section_name.length>9 ? "importantItem":"" } ${elements_count!=='0' ? "elements_inside":""}`} 
                 onClick={()=>OpenSection(_id)} 
                 key={_id} 
                 id={_id}>
