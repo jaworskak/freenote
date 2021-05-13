@@ -50,9 +50,8 @@ a {
     url('./logo.png');
     background-size: cover;
     background-position: center;
-    border: 2px solid var(--accent-blue);
-    box-shadow:0.25em 0.235em 0.75em var(--accent-blue),
-                  0.125em 0.125em 0.25em black;
+    box-shadow:0.05em 0.235em 0.75em var(--light-blue),
+                  0.125em 0.125em 0.25em var(--accent-blue);
 }
 
 
@@ -99,6 +98,7 @@ a {
   letter-spacing: 0.1rem;
   display: block;
   padding: 0.5rem;
+  text-shadow: 0.125em 0.025em 0.55em var(--accent-blue);
 }
 .links a:hover {
   color: white;
@@ -121,8 +121,6 @@ a {
   .links a{
     font-size: 1.5rem;
     padding: 1rem;
-    text-shadow:0.25em 0.235em 0.75em var(--accent-blue),
-              0.125em 0.125em 0.25em black;
   }
 
 }
