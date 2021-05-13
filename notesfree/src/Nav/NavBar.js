@@ -1,4 +1,4 @@
-import React, {useState}  from 'react'
+import React, {useState, useEffect, useRef}  from 'react'
 import {useGlobalContext} from '../context'
 import axios from 'axios';
 
@@ -6,20 +6,29 @@ import { FaHamburger } from 'react-icons/fa'
 
 const NavBar = () =>{
 
-     const ShowModal = () =>{   
+    const {parent_section_id,parent_section_name} = useGlobalContext()
+    const [ModalAddSectionOpen,setModalAddSectionOpen] = useState(false)
+    const [newSectionName,setNewsetionName] = useState("")
+    const linksContainerRef = useRef(null)
+
+    const [showLinks,setShowLinks] = useState(false)
+
+    useEffect(()=>{
+        if(showLinks){ // jak klikniete pokaz linki to pokazujemy
+            linksContainerRef.current.style.height='130px'
+        }
+        else{
+            linksContainerRef.current.style.height='0px'
+        }
+    },[showLinks])
+
+    const ShowModal = () =>{   
          console.log(document.getElementsByClassName("mainsection").style)  
         // document.getElementsByClassName("mainsection").style.display='block'
         setModalAddSectionOpen(true);
     }
 
-    const {parent_section_id,parent_section_name} = useGlobalContext()
-    const [ModalAddSectionOpen,setModalAddSectionOpen] = useState(false)
-    const [newSectionName,setNewsetionName] = useState("")
-
-    const [showLinks,setShowLinks] = useState(false)
-
-    
-      const BtnAddNewSection = ()=>{
+    const BtnAddNewSection = ()=>{
           setModalAddSectionOpen(false);
          // AddNewSection(parent_section_id,opened_section_id,newSectionName)
 
@@ -39,6 +48,25 @@ const NavBar = () =>{
                     <button className="navbar_toggle_btn" onClick={()=>setShowLinks(!showLinks)}>
                         <FaHamburger />
                     </button>
+            </div>
+            <div className="navbar__links_container" ref={linksContainerRef}>
+                <ul className="links">
+                    <li>
+                        <a href="#" class="navbar_menu_btn search">
+                        WYSZUKAJ
+                        </a>                  
+                    </li>
+                    <li>
+                        <a href="#" class="navbar_menu_btn add" onClick={ShowModal}>
+                         DODAJ SEKCJĘ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="navbar_menu_btn login">
+                         ZALOGUJ
+                        </a>
+                    </li>
+                </ul>
             </div>
 
 

@@ -6,6 +6,13 @@
   overflow:hidden;
 }
 
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
 :root{
   --main-blue: rgb(42,73,116);
   --light-blue: rgb(55,118,180);
@@ -20,7 +27,6 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 
 
 /* navbar */
@@ -54,13 +60,14 @@
     border: 2px solid rgb(216, 220, 227, 0.4);
 }
 
+
+
 @media (min-width:800px){
   .logo{
     width:15vw;
   }
+
 }
-
-
 
 .navbar_toggle_btn {
   font-size: 1.5rem;
@@ -74,6 +81,69 @@
   color: var(--accent-blue);
   transform: rotate(180deg); /*przekrec sie*/
 }
+
+/*linki*/
+
+.navbar__links_container{
+  height:0;
+  overflow:hidden; 
+  transition: var(--transition); /*na malych ekranach widac dopiero po kliknieciu*/
+}
+
+.links a {
+  color: var(--accent-blue);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.links a:hover {
+  color: var(--accent-purple);
+  padding-left: 1.5rem;
+}
+
+@media (min-width:800px){
+
+  .navbar_toggle_btn{
+    display:none; /*hamburger menu tylko dla malych ekranów*/
+  }
+
+  .navbar__links_container{
+    height: auto !important; /*na dużych widać wszystkie linki*/
+  }
+  
+  .links {
+    display: flex; /*wyswietlenie w jednym wierszu*/
+  }
+
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+}
+
+/*buttons*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* todo*/
@@ -104,29 +174,6 @@
     align-self: center; /*na srodku*/
 }
 
-/*buttons*/
-
-.navbar_menu_btn {
-  width: 10vw;
-  height: 5vh;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #91C9FF;
-  outline: none;
-}
-
-
-
-.navbar_menu_btn:hover {
-  transition: 1s ease-in-out;
-  background: #3776b4;
-}
-
-.navbar_menu_btn span {
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
-}
 
 /*buttons*/
 
