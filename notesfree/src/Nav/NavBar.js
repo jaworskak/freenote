@@ -1,8 +1,8 @@
 import React, {useState}  from 'react'
-import '../index.css'
 import {useGlobalContext} from '../context'
 import axios from 'axios';
-import logo from './logo.png'
+
+import { FaHamburger } from 'react-icons/fa'
 
 const NavBar = () =>{
 
@@ -15,6 +15,8 @@ const NavBar = () =>{
     const {parent_section_id,parent_section_name} = useGlobalContext()
     const [ModalAddSectionOpen,setModalAddSectionOpen] = useState(false)
     const [newSectionName,setNewsetionName] = useState("")
+
+    const [showLinks,setShowLinks] = useState(false)
 
     
       const BtnAddNewSection = ()=>{
@@ -31,7 +33,16 @@ const NavBar = () =>{
 
     return (
         <nav className="navbar">
-            <div className="logo"></div>
+            <div className="navbar__logo_toggle_container">
+                    <div className="logo">
+                    </div>
+                    <button className="navbar_toggle_btn" onClick={()=>setShowLinks(!showLinks)}>
+                        <FaHamburger />
+                    </button>
+            </div>
+
+
+         {/*}   <div className="logo"></div>
            <div className="navbar_menu">                      
             <button class="navbar_menu_btn search">
                 <span>WYSZUKAJ</span>
@@ -42,7 +53,7 @@ const NavBar = () =>{
             <button class="navbar_menu_btn login">
                 <span>ZALOGUJ</span>
             </button>
-           </div>
+    </div>*/}
 
                 { ModalAddSectionOpen &&
         <div className="modalOverlay">

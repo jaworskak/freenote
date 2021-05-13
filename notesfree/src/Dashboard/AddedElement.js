@@ -1,5 +1,4 @@
 import React from 'react'
-import '../index.css'
 import test from  './test.jpg'
 
 export default function AddedElement(props) {
