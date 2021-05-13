@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import NavBar from './Nav/NavBar'
-import MainSection from './MainSection/MainSection'
+import Dashboard from './Dashboard/Dashboard'
 import {AppProvider} from './context'
 
 ReactDOM.render(
@@ -10,7 +10,7 @@ ReactDOM.render(
     <AppProvider>
       <div className="app-container">
           <NavBar/>
-          <MainSection/>
+          <Dashboard/>
       </div>
     </AppProvider> 
   </React.StrictMode>,

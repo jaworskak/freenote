@@ -1,5 +1,5 @@
 import React, {useState}  from 'react'
-import './NavBar.css'
+import '../index.css'
 import {useGlobalContext} from '../context'
 import axios from 'axios';
 import logo from './logo.png'

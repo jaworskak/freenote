@@ -3,7 +3,7 @@ import './MainSection.css'
 import Section from './Section'
 import axios from 'axios';
 
-const MainSection = () =>{
+const Dashboard = () =>{
 
   
     const [sectionList,setSectionList] = useState([])
@@ -61,4 +61,4 @@ const MainSection = () =>{
     )  
 }
 
-export default MainSection
+export default Dashboard
