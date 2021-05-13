@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavBar from './Nav/NavBar'
-import Dashboard from './Dashboard/Dashboard'
 import {AppProvider} from './context'
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <div className="app-container">
-          <NavBar/>
-          <Dashboard/>
-      </div>
+    <App/>
     </AppProvider> 
   </React.StrictMode>,
   document.getElementById('root')

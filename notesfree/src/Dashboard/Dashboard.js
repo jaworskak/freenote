@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Section from './Section'
 import axios from 'axios';
 
-const Dashboard = () =>{
+const Dashboard = (props) =>{
 
   
     const [sectionList,setSectionList] = useState([])
@@ -21,11 +21,10 @@ const Dashboard = () =>{
     }
 
     useEffect(async()=>{
+        console.log('reload section list')
         const result = await axios.get('http://localhost:5000/sections/')
         setSectionList(result.data)
-    },[]) // [] wywoluje  useEffect tylko raz - poczatkowe ladowanie elementów - wszystkie sekcje są zamknięte
-    // jak klikne w dana sekcje to ona powinna sie otworzyc - get bedzie potem pobieral zagniezdzone sekcje na razie nie
-    // na razie na onclick otwieram i zamykam daną sekcję
+    },[props.newSection]) // jak przyjda nowe propertisy to sie przeladuje?
 
   
     return (

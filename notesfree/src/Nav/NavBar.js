@@ -1,14 +1,12 @@
 import React, {useState, useEffect, useRef}  from 'react'
-import {useGlobalContext} from '../context'
 import axios from 'axios';
 
 import { FaHamburger } from 'react-icons/fa'
 import {SiAddthis} from 'react-icons/si'
 import {AiFillCloseSquare} from 'react-icons/ai'
 
-const NavBar = () =>{
+const NavBar = (props) =>{
 
-    const {parent_section_id,parent_section_name} = useGlobalContext()
     const [ModalAddSectionOpen,setModalAddSectionOpen] = useState(false)
     const [newSectionName,setNewsetionName] = useState("")
     const linksContainerRef = useRef(null)
@@ -24,22 +22,20 @@ const NavBar = () =>{
         }
     },[showLinks])
 
-    const ShowModal = () =>{   
-         console.log(document.getElementsByClassName("mainsection").style)  
-        // document.getElementsByClassName("mainsection").style.display='block'
+    const ShowModal = () =>{    // otworz modal do dodawania elementow
         setModalAddSectionOpen(true);
     }
 
-    const BtnAddNewSection = ()=>{
+    const BtnAddNewSection = ()=>{ // dodaj nowa sekcje
           setModalAddSectionOpen(false);
-         // AddNewSection(parent_section_id,opened_section_id,newSectionName)
-
+ 
         const section = {
             section_name: newSectionName
         }
         axios.post('http://localhost:5000/sections/add', section)
         .then(res => console.log(res.data));
 
+        props.onChange() // zwroc do app informacje, ze dashboard musi przeladowac sekcje
       }
 
     return (
