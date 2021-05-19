@@ -1,4 +1,4 @@
-import React, {useState,useEffect } from 'react'
+import React, {useState,useEffect,useRef } from 'react'
 import Element from './Element'
 import axios from 'axios';
 import AddedElement from './AddedElement'
@@ -10,23 +10,27 @@ const Section = (props) =>{
     const [addNewElem,setAddNewElem] = useState(false)
     const [SectionElements,setSectionElements] = useState([])
     const [closedSection,setSectionClosed] = useState(false)
+    const openSectionContainer = useRef(null)
 
      useEffect(async()=>{
         const result = await axios.get('http://localhost:5000/notedElements/'+props.section_id)
         setSectionElements(result.data)           
     },[addNewElem]) // ladowanie wszystkich elementów w sekcji
 
+    useEffect(async()=>{
+      if(closedSection){
+         openSectionContainer.current.style.display='none';
+      }
+    },[closedSection])
+
     function newEelementAdded(){ // zamykamy okno dodawania nowego elementu
-       console.log('props onchange1')
       setAddNewElem(false)
-      // info do parenta zeby odswiezyc liste sekcji
-      console.log('props onchange')
     }
 
   
  
     return (  
-        <div className={`currentSection__container ${closedSection ? "":"visible" }`} >
+        <div className="currentSection__container" ref={openSectionContainer}>
             <div className="currentSection__navbar">
               <h3 className="currentSection__name">{props.section_name}</h3>
               <button className="currentSection__add_btn" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <span>{props.section_name}</span></button>  

@@ -478,6 +478,9 @@ a {
   overflow-x: hidden;
 }
 
+.currentSection__container .close{
+  display:none;
+}
 
 .addedSingleElem{
    margin:0.25em;
