@@ -19,7 +19,6 @@ const Section = (props) =>{
       setAddNewElem(false)
       // info do parenta zeby odswiezyc liste sekcji
       console.log('props onchange')
-      props.onChange()
     }
  
     return (  

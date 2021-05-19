@@ -82,6 +82,7 @@ a {
 .navbar_toggle_btn:hover {
   color: var(--accent-blue);
   transform: rotate(180deg); /*przekrec sie*/
+  cursor:pointer;
 }
 
 /*linki*/
@@ -106,6 +107,7 @@ a {
 }
 .links a:hover {
   color: white;
+  cursor:pointer;
 }
 
 @media (min-width:800px){
@@ -286,6 +288,7 @@ a {
 .sectionListItem:hover{
     transition: 1s ease-in-out;
     background: #3776b4;
+    cursor:pointer;
 }
 
 
@@ -365,6 +368,7 @@ a {
   .currentSection{
     background-color:rgb(216, 220, 227, 0.6);
     padding:1rem;
+    display:grid;
   }
 }
 
@@ -407,8 +411,8 @@ a {
 }
 
 .add_element__container_tag input{
-  margin-top: 5vh;
-  font-size: 1.5vw;
+  margin:0.5em;
+  font-size: 1.2em;
   border:2px solid #343f56;
   color:#343f56;
 }
