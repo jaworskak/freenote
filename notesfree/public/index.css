@@ -244,7 +244,13 @@ a {
 .dashboard{
   height: 83vh;
   display:grid;
-  grid-template-columns: 30vw 70vw;
+  margin: 0.5em;
+}
+
+@media (min-width:1300px){ /*jak otiweramy w malym oknie to widok jest na cala strone*/ 
+  .dashboard{
+     grid-template-columns: 30vw 70vw;
+  }
 }
 
 .sectionList{
@@ -253,7 +259,8 @@ a {
     grid-gap:3px;
     font-size: 0.7rem;
     /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr,1fr) ) ;*/
-    grid-template-columns: 50% 50%;
+     grid-template-columns: 25% 25% 25% 25%;
+     font-size: 1rem;
     background-color:rgb(216, 220, 227, 0.6);
 }
 
@@ -287,12 +294,7 @@ a {
 }
 
 
-@media (min-width:1300px){
-    .sectionList{
-     grid-template-columns: 25% 25% 25% 25%;
-     font-size: 1rem;
-    }
-}
+
 
 
 .sectionListItem p{
@@ -308,8 +310,7 @@ a {
 /* ---------------------------------------------OPENED SECTION------------------------------------------------------------- */
 
 .currentSection{
-   background-color:rgb(216, 220, 227, 0.6);
-   padding:1rem;
+   display:none;
 }
 
 .currentSection__navbar{
@@ -357,6 +358,13 @@ a {
   }
   .currentSection__navbar{
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width:1300px){
+  .currentSection{
+    background-color:rgb(216, 220, 227, 0.6);
+    padding:1rem;
   }
 }
 
