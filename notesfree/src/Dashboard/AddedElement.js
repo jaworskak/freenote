@@ -7,7 +7,7 @@ export default function AddedElement(props) {
     return (
         <div className="addedSingleElem">
         <div className="addedElem__tag">{props.tag}</div>
-         <div className={`addedElem ${text_len>20? "long_text": ""}`}>
+         <div className="addedElem">
             {props.is_text_note_link===false &&
             <p className="addedElem__text">{props.text_note}</p> }
             {props.is_text_note_link &&

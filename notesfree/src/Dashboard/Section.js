@@ -22,10 +22,10 @@ const Section = (props) =>{
     }
  
     return (  
-        <div>
+        <div className="currentSection__container">
             <div className="currentSection__navbar">
-              <h3>{props.section_name}</h3>
-              <button className="currentSection__add_btn" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <b>{props.section_name}</b></button>  
+              <h3 className="currentSection__name">{props.section_name}</h3>
+              <button className="currentSection__add_btn" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <span>{props.section_name}</span></button>  
             </div>
              <div className="currentSection__addNewElement">
               {addNewElem &&

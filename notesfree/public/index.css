@@ -104,6 +104,8 @@ a {
   display: block;
   padding: 0.5rem;
   text-shadow: 0.125em 0.025em 0.55em var(--accent-blue);
+  letter-spacing: 0.25em;
+  font-weight: 900;
 }
 .links a:hover {
   color: white;
@@ -270,11 +272,14 @@ a {
     background-color:rgb(42,73,116, 0.8);
     color:white;
     padding:2px;
-     border: 1px solid #91C9FF;
+    border: 1px solid #91C9FF;
     text-align: center;
-     position: relative;
-     opacity:0;
-     transition: opacity 1s;
+    position: relative;
+    opacity:0;
+    transition: opacity 1s;
+    text-transform:uppercase;
+    letter-spacing: 0.20em;
+    font-weight: 600;
 }
 
 .sectionListItem.visible{
@@ -324,9 +329,15 @@ a {
     color:white;
     border-bottom: 2px solid white;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
+.currentSection__name{
+  width:60vw;
+  padding-top: 0.5em;
+  text-transform:uppercase;
+  letter-spacing: 0.20em;
+}
 
 
 
@@ -338,6 +349,13 @@ a {
   background-color:rgb(42,73,116, 0.8);
   color:white;
   border: 1px solid #91C9FF;
+}
+
+
+.currentSection__add_btn span{
+  text-transform:uppercase;
+  font-weight: 800;
+ 
 }
 
 
@@ -439,10 +457,12 @@ a {
 
 /* --------------------------------------------- ADDED ELEMENTS  ------------------------------------------------------------- */
 
+.currentSection__container{
+  overflow: scroll;
+  overflow-x: hidden;
+}
 
 .addedSingleElem{
-   display:flex;
-   flex-direction: column;
    margin:0.25em;
    border-radius: 10px 10px 10px 10px;
    border: 2px solid rgba(42,73,116, 0.9);
@@ -458,6 +478,15 @@ a {
     background-color:var(--main-blue);
     height:5vh;
 }
+
+.addedElem{
+  display: flex;
+  flex-direction: row;
+}
+
+ .addedElem > *{
+        flex-BASIS: 100%; /*!!!!!!!!!!!!!!!!!!!!!!!!zmniejsza oba i maja ten sam rozmiar*/
+  }
 
 .addElem a{
   text-decoration: none;
