@@ -49,12 +49,7 @@ const NavBar = (props) =>{
             </div>
             <hr/>
             <div className="navbar__links_container" ref={linksContainerRef}>
-                <ul className="links">
-                    <li>
-                        <a href="#" class="navbar_menu_btn search">
-                        WYSZUKAJ
-                        </a>                  
-                    </li>
+                <ul className="links">                  
                     <li>
                         <a href="#" class="navbar_menu_btn add" onClick={ShowModal}>
                          DODAJ SEKCJĘ
