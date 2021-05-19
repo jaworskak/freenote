@@ -5,7 +5,7 @@ export default function AddedElement(props) {
    const text_len = props.text_note.length
    
     return (
-        <>
+        <div className="addedSingleElem">
         <div className="addedElem__tag">{props.tag}</div>
          <div className={`addedElem ${text_len>20? "long_text": ""}`}>
             {props.is_text_note_link===false &&
@@ -17,6 +17,6 @@ export default function AddedElement(props) {
             <img className="addedElem__photo" src={test} alt="test"></img>
             }
         </div>
-        </>
+        </div>
     )
 }

@@ -323,14 +323,12 @@ a {
     background-color:rgba(15, 33, 58, 0.8);
     color:white;
     border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: column;
 }
 
 
-.currentSection__add_container{
-    background-color:rgba(15, 33, 58, 0.8);
-    color:white;
-    border-top: white;
-}
+
 
 .currentSection__add_btn{
   padding:0.5rem;
@@ -351,6 +349,7 @@ a {
 
 .currentSection__elements{
     display: grid;
+    grid-template-columns: 1fr 1fr;
     min-height: 50vh;
     background-color:rgb(42,73,116, 0.8); 
 }
@@ -372,6 +371,7 @@ a {
   }
 }
 
+
 /* --------------------------------------------- ADD NEW ELEMENT ------------------------------------------------------------- */
 
 
@@ -381,6 +381,7 @@ a {
 
 .addelement {
   border: 1px solid black;
+  background: var(--main-blue);
 }
 
 .add_element__label{
@@ -438,22 +439,23 @@ a {
 
 /* --------------------------------------------- ADDED ELEMENTS  ------------------------------------------------------------- */
 
-.addedElem{
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
+
+.addedSingleElem{
+   display:flex;
+   flex-direction: column;
+   margin:0.25em;
+   border-radius: 10px 10px 10px 10px;
+   border: 2px solid rgba(42,73,116, 0.9);
+   background: whitesmoke;
 }
 
-.addedElem.long_text{
-     grid-template-columns: repeat(2,1fr);
-    
-}
 
 .addedElem__tag{
     color:white;
     text-align: left;
     text-transform: capitalize;
     padding:0.5rem;
-    background-color:blueviolet;
+    background-color:var(--main-blue);
     height:5vh;
 }
 
@@ -464,6 +466,7 @@ a {
 
 .addedElem__text{
     text-align: left;
+    padding:1em;
 }
 
 .addedElem__photo{

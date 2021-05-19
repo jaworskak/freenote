@@ -48,7 +48,7 @@ export const UploadFileBtn = styled.button`
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
-  border: 2px solid #343f56;
+  border: 2px solid white;
   cursor: pointer;
   font-size: 1rem;
   line-height: 1;
@@ -57,7 +57,7 @@ export const UploadFileBtn = styled.button`
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 6px;
-  color: #343f56;
+  color: white;
   position: relative;
   overflow: hidden;
   z-index: 1;
