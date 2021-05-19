@@ -317,8 +317,25 @@ a {
 
 /* ---------------------------------------------OPENED SECTION------------------------------------------------------------- */
 
-.currentSection{
-   display:none;
+.currentSection{ /*w malych ekranach otwieram to na cala strone*/
+ display:none;
+}
+
+.currentSectionModal{
+  
+}
+
+.modalSection_overlay{
+  z-index:100;
+    position:fixed;
+      width:100vw;
+      height:100vh;
+      top:0;
+      left:0;
+      background-color:black;
+      overflow: hidden;
+      z-index:3;
+      background: rgba(42,73,116, 0.9);
 }
 
 .currentSection__navbar{
@@ -400,6 +417,13 @@ a {
     background-color:rgb(216, 220, 227, 0.6);
     padding:1rem;
     display:grid;
+  }
+  .modalSection_overlay{
+    display:none;
+  }
+
+  .currentSectionModal{
+    display:none;
   }
 }
 

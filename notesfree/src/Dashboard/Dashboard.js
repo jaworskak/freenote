@@ -51,13 +51,20 @@ const Dashboard = (props) =>{
             </div>    
             }  
             {openedSectionId!==0 &&
+            <div>
             <div className="currentSection">
                  <Section 
                     key={openedSectionId} 
                     section_id={openedSectionId} 
                     section_name={openedSectionName} 
                     />
-            </div>}
+            </div>
+            <div className="modalSection_overlay">
+            <div className="currentSectionModal">
+                </div>
+            </div>
+            </div>
+            }
         </div>
     )  
 }
