@@ -2,12 +2,14 @@ import React, {useState,useEffect } from 'react'
 import Element from './Element'
 import axios from 'axios';
 import AddedElement from './AddedElement'
+import {AiFillCloseSquare} from 'react-icons/ai'
 
 const Section = (props) =>{
 
   
     const [addNewElem,setAddNewElem] = useState(false)
     const [SectionElements,setSectionElements] = useState([])
+    const [closedSection,setSectionClosed] = useState(false)
 
      useEffect(async()=>{
         const result = await axios.get('http://localhost:5000/notedElements/'+props.section_id)
@@ -20,12 +22,17 @@ const Section = (props) =>{
       // info do parenta zeby odswiezyc liste sekcji
       console.log('props onchange')
     }
+
+  
  
     return (  
-        <div className="currentSection__container">
+        <div className={`currentSection__container ${closedSection ? "":"visible" }`} >
             <div className="currentSection__navbar">
               <h3 className="currentSection__name">{props.section_name}</h3>
               <button className="currentSection__add_btn" onClick={() =>setAddNewElem(true)}>Dodaj nowy element do <span>{props.section_name}</span></button>  
+                    <button className="currentSection__exit_btn" onClick={()=>setSectionClosed(true)}>
+                        <AiFillCloseSquare/>
+                    </button>
             </div>
              <div className="currentSection__addNewElement">
               {addNewElem &&

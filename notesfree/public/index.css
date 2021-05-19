@@ -325,21 +325,34 @@ a {
     font-size: 1.5rem;
     text-align: center;
     text-transform: capitalize;
-    background-color:rgba(15, 33, 58, 0.8);
+    background-color:rgba(15, 33, 58);
     color:white;
     border-bottom: 2px solid white;
     display: flex;
     flex-direction: row;
+    position: fixed;
+    width:69%;
+    padding:0.5em;
 }
 
+
+ .currentSection__navbar > *{
+        flex-BASIS: 100%; /*!!!!!!!!!!!!!!!!!!!!!!!!zmniejsza oba i maja ten sam rozmiar*/
+  }
+
 .currentSection__name{
-  width:60vw;
   padding-top: 0.5em;
   text-transform:uppercase;
   letter-spacing: 0.20em;
 }
 
-
+.currentSection__exit_btn{
+ background: transparent;
+  border-color: transparent;
+  font-size:1.5rem;
+  margin-right:0;
+  color: var(--accent-danger);
+}
 
 .currentSection__add_btn{
   padding:0.5rem;
@@ -366,6 +379,7 @@ a {
 
 
 .currentSection__elements{
+  margin-top:5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 50vh;
@@ -457,10 +471,13 @@ a {
 
 /* --------------------------------------------- ADDED ELEMENTS  ------------------------------------------------------------- */
 
+
+
 .currentSection__container{
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
 }
+
 
 .addedSingleElem{
    margin:0.25em;
