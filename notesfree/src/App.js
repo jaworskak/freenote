@@ -8,7 +8,7 @@ const App =() => {
 
     const [addedSection,SetAddedSection] = useState(0)
 
-    function refreshSectionList(){ // navbar zwraca informacje, ze dodal nowa sekcje 
+    function refreshSectionList(){ // new section added?
         SetAddedSection(sectionNum => sectionNum+1)
     }
 

@@ -1,19 +1,19 @@
 const router = require('express').Router();
 let Section = require('../models/section.model');
 
-router.route('/').get((req, res) => {
+router.route('/').get((req, res) => { // get section
   Section.find()
     .then(sect => res.json(sect)) 
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/:id').get((req, res) => {
+router.route('/:id').get((req, res) => { // get section by id
   Section.findById(req.params.id)
     .then(sect => res.json(sect))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req, res) => { 
+router.route('/add').post((req, res) => { // add new section
   const section_name = req.body.section_name;
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import test from  './test.jpg'
 
-export default function AddedElement(props) {
+export default function AddedElement(props) { // return single saved element 
    const text_len = props.text_note.length
    
     return (

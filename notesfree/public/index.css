@@ -50,7 +50,7 @@ a {
 }
 
 .navbar__logo_toggle_container{
-    display: flex; /*element typu flex*/
+    display: flex; /*flex element*/
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
@@ -81,7 +81,7 @@ a {
 }
 .navbar_toggle_btn:hover {
   color: var(--accent-blue);
-  transform: rotate(180deg); /*przekrec sie*/
+  transform: rotate(180deg); /*turn on hover*/
   cursor:pointer;
 }
 
@@ -93,7 +93,7 @@ a {
   background-image: linear-gradient(to bottom, var(--light-blue),var(--main-blue));
   height:0;
   overflow:hidden; 
-  transition: var(--transition); /*na malych ekranach widac dopiero po kliknieciu*/
+  transition: var(--transition); /*small screen - show only on click*/
 }
 
 .links a {
@@ -115,7 +115,7 @@ a {
 @media (min-width:800px){
 
   .navbar{
-    display:flex; /*ladne ulozenie linkow na wiekszym ekranie*/
+    display:flex; /*display on bigger screens*/
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
@@ -126,18 +126,18 @@ a {
   }
 
   .navbar_toggle_btn{
-    display:none; /*hamburger menu tylko dla malych ekranów*/
+    display:none; /*hamburger menu for small devices*/
   }
 
   .navbar__links_container{
-    height: auto !important; /*na dużych widać wszystkie linki*/
+    height: auto !important; /*show all links on bigger devices*/
     position:relative;
     width:auto; 
     background-image:none ;
   }
 
   .links {
-    display: flex; /*wyswietlenie w jednym wierszu*/
+    display: flex; 
   }
 
   .links a{
@@ -147,7 +147,7 @@ a {
 
 }
 
-/* ---------------------------------------------MODAL - DODANIE GLOWNEJ SEKCJI------------------------------------------------------------- */
+/* ---------------------------------------------MODAL - ADDNIG NEW SECTION------------------------------------------------------------- */
 .modal_overlay{
       position:fixed;
       width:100vw;
@@ -177,10 +177,9 @@ a {
      position: fixed;
      width:60vw;
      height:20vh;
-     /* zeby bylo zawsze na srodku */
      left:50%;
      top:50%;
-     transform: translate(-50%, -50%); /* pozycja zawsze na środku*/
+     transform: translate(-50%, -50%); 
      border: 2px solid var(--light-blue);
      color:white;
      background: linear-gradient(rgba(247, 7, 7, 0.9),gray, gray, rgba(247, 7, 7, 0.9)),
@@ -251,7 +250,7 @@ a {
   margin: 0.5em;
 }
 
-@media (min-width:1300px){ /*jak otiweramy w malym oknie to widok jest na cala strone*/ 
+@media (min-width:1300px){ /*ON SMALL DEVICES SHOW ONLY THAT*/ 
   .dashboard{
      grid-template-columns: 30vw 70vw;
   }
@@ -262,7 +261,6 @@ a {
     display: grid;
     grid-gap:3px;
     font-size: 0.7rem;
-    /*grid-template-columns: repeat(auto-fill, minmax(200px, 1fr,1fr) ) ;*/
      grid-template-columns: 25% 25% 25% 25%;
      font-size: 1rem;
     background-color:rgb(216, 220, 227, 0.6);
@@ -317,13 +315,10 @@ a {
 
 /* ---------------------------------------------OPENED SECTION------------------------------------------------------------- */
 
-.currentSection{ /*w malych ekranach otwieram to na cala strone*/
+.currentSection{ /*SMALL DEVICES - OPENED SECTION TAKES WHOLE WINDOW*/
  display:none;
 }
 
-.currentSectionModal{
-  
-}
 
 .modalSection_overlay{
   z-index:100;
@@ -354,7 +349,7 @@ a {
 
 
  .currentSection__navbar > *{
-        flex-BASIS: 100%; /*!!!!!!!!!!!!!!!!!!!!!!!!zmniejsza oba i maja ten sam rozmiar*/
+        flex-BASIS: 100%; /*SAME SIVE FOR EVERY ITEM*/
   }
 
 .currentSection__name{
@@ -529,7 +524,7 @@ a {
 }
 
  .addedElem > *{
-        flex-BASIS: 100%; /*!!!!!!!!!!!!!!!!!!!!!!!!zmniejsza oba i maja ten sam rozmiar*/
+        flex-BASIS: 100%; 
   }
 
 .addElem a{

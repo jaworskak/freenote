@@ -3,7 +3,7 @@ let notedElem = require('../models/notedElem.model');
 
 router.route('/').get((req, res) => {
   notedElem.find()
-    .then(elem => res.json(elem)) // jak ok to zwracamy jsona z userem
+    .then(elem => res.json(elem)) // if ok then return element
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
@@ -13,7 +13,7 @@ router.route('/:id').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/add').post((req, res) => { // podajemy nowego usera 
+router.route('/add').post((req, res) => { // adding new element
 
     const text_note = req.body.text_note;
     const is_text_note_link = req.body.is_text_note_link;
